@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			html{
+				font-size: 20px;
+			}
+			body {
+				font-size: 1.2rem;
+				font-family: "微软雅黑";
+			}
+			.btn {
+				width: 6rem;
+				height: 3rem;
+				line-height: 3rem;
+				text-align: center;
+				border: none;
+				background-color: #35addc;
+				color: #fff;
+				font-size: 1.6rem;
+				cursor: pointer;
+			}
+		</style>
+		<script type="text/javascript">
+			!(function (doc, win) {
+		    var el = doc.documentElement,
+		        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+		
+		    function setSize() {
+		        var clientWidth = el.clientWidth;
+		        if (!clientWidth) return;
+		        el.style.fontSize = 100 * (clientWidth / 375) + 'px';
+		    }
+		    if (!doc.addEventListener) return;
+		    win.addEventListener(resizeEvt, setSize, false);
+		    doc.addEventListener('DOMContentLoaded', setSize, false);
+			})(document, window);
+			
+			//，我们在 375px 的设计稿上量取某元素高度为 100px, 只需要 除以100，在 CSS 种写 height: 1rem;即可
+		</script>
+	</head>
+	<body>
+		<p>说的阿斯蒂芬红烧鸡块</p>
+		<button class="btn">按钮</button>
+	</body>
+</html>
