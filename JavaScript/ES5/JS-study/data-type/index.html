@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS——数据类型</title>
+	</head>
+	<body>
+		<h3>
+			js-数据类型
+		</h3>
+	</body>
+	<script type="text/javascript">
+		//null,underfined
+		console.log(null == undefined) //true
+		console.log(null === undefined) //false
+		
+		//Number		
+		console.log(0.05 + 0.25 == 0.3) //true
+		console.log(0.15 + 0.15 == 0.3) //true
+		console.log(0.1 + 0.2 == 0.3) //false
+		console.log(NaN == NaN) //false
+		console.log(isNaN(NaN)) //true
+		
+		var maxNum = Number.MAX_VALUE;
+		var minNum = Number.MIN_VALUE;
+		console.log(isFinite(maxNum)) // false
+		
+		//数值转换
+		Number(undefined)
+		//NaN
+		Number(NaN)
+		//NaN
+		Number(null)
+		//0
+		
+		Object.prototype.toString.call([])    // "[object Array]"
+		Object.prototype.toString.call({})    // "[object Object]"
+		Object.prototype.toString.call(2)    // "[object Number]"
+		Object.prototype.toString.call(null) // "[object Null]"
+		Object.prototype.toString.call(undefined) // "[object Undefined]"
+		
+	</script>
+</html>
