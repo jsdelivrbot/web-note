@@ -48,3 +48,7 @@ HTML5 CSS3 相关的知识可以翻阅
 阿里数据可视化
 - [jsFiddle](https://jsfiddle.net/)
 在线编辑web测试开发
+
+
+## 博客借鉴
+- [My Coding Life](http://bin-playground.top/#/)

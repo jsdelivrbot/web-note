@@ -131,7 +131,6 @@ function extend(Child, Parent) {
 	Child.prototype.constructor = Child;
 	Child.uber = Parent.prototype;
 }
-
 //copy继承
 function extend2(Child, Parent) {
 	var p = Parent.prototype;

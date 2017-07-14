@@ -1,4 +1,4 @@
-###Welcome to prototype
+# Welcome to prototype
 
 ![](http://i.imgur.com/ouw4M3j.jpg)
 
@@ -150,6 +150,133 @@ b.doSomething();
 ```
 ![](http://i.imgur.com/xmuAAaN.png)
 
-## 基础篇
+## 运用篇
 
 - [原型使用](http://www.cnblogs.com/TomXu/archive/2012/01/05/2305453.html)
+
+- [原型重要性](https://segmentfault.com/a/1190000002596600)
+
+- [原型继承方式简介](https://segmentfault.com/a/1190000000766541)
+
+
+**new 与 apply**
+
+```js
+Function.prototype.new = function () {
+    function functor() { return constructor.apply(this, args); }
+    var args = Array.prototype.slice.call(arguments);
+    functor.prototype = this.prototype;
+    var constructor = this;
+    return new functor;
+};
+
+function Person(firstname,lastname){
+    this.firstname = firstname ;
+    this.lastname = lastname ;
+}
+
+var author = Person.new.apply(Person,['Aadit','Shah']) ;
+```
+
+## 总结大法
+
+```js
+var deepClone = function(source,target){
+    source = source || {} ;
+    target = target || {};
+    var toStr = Object.prototype.toString ,
+        arrStr = '[object array]' ;
+    for(var i in source){
+        if(source.hasOwnProperty(i)){
+            var item = source[i] ;
+            if(typeof item === 'object'){
+                target[i] = (toStr.apply(item).toLowerCase() === arrStr) ? [] : {} ;
+                deepClone(item,target[i]) ;    
+            }else{
+                target[i] = item;
+            }
+        }
+    }
+    return target ;
+} ;
+var Parent = function(name){
+    this.name = name || 'parent' ;
+} ;
+Parent.prototype.getName = function(){
+    return this.name ;
+} ;
+Parent.prototype.obj = {a : '1'} ;
+
+var Child = function(name){
+    Parent.apply(this,arguments) ;
+} ;
+Child.prototype = deepClone(Parent.prototype) ;
+
+var child = new Child('child') ;
+var parent = new Parent('parent') ;
+
+console.log(child.obj.a) ; //1
+console.log(parent.obj.a) ; //1
+child.obj.a = '2' ;
+console.log(child.obj.a) ; //2
+console.log(parent.obj.a) ; //1
+```
+
+合
+
+```js
+var deepClone = function(source,target){
+    source = source || {} ;
+    target = target || {};
+    var toStr = Object.prototype.toString ,
+        arrStr = '[object array]' ;
+    for(var i in source){
+        if(source.hasOwnProperty(i)){
+            var item = source[i] ;
+            if(typeof item === 'object'){
+                target[i] = (toStr.apply(item).toLowerCase() === arrStr) ? [] : {} ;
+                deepClone(item,target[i]) ;    
+            }else{
+                target[i] = item;
+            }
+        }
+    }
+    return target ;
+} ;
+
+var extend = function(Parent,Child){
+    Child = Child || function(){} ;
+    if(Parent === undefined)
+        return Child ;
+    //借用父类构造函数
+    Child = function(){
+        Parent.apply(this,argument) ;
+    } ;
+    //通过深拷贝继承父类原型    
+    Child.prototype = deepClone(Parent.prototype) ;
+    //重置constructor属性
+    Child.prototype.constructor = Child ;
+} ;
+
+var Parent = function(name){
+    this.name = name || 'parent' ;
+} ;
+Parent.prototype.getName = function(){
+    return this.name ;
+} ;
+Parent.prototype.obj = {a : '1'} ;
+
+var Child = function(name){
+    Parent.apply(this,arguments) ;
+} ;
+
+extend(Child, Parent);
+var child = new Child('child') ;
+var parent = new Parent('parent') ;
+
+console.log(child.obj.a) ; //1
+console.log(parent.obj.a) ; //1
+child.obj.a = '2' ;
+console.log(child.obj.a) ; //2
+console.log(parent.obj.a) ; //1
+```
