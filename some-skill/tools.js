@@ -117,3 +117,32 @@ const extend = (obj1,obj2) =>{
 const maxNum = arr.reduce(function(a, b) {
     return Math.max(a, b);
 });
+
+
+// 汉字转为Unicode字符码表示，汉字一般采用16进制的unicode
+function toUnicode(s){ 
+  return s.replace(/([\u4E00-\u9FA5]|[\uFE30-\uFFA0])/g,function(){
+    return "\\u" + RegExp["$1"].charCodeAt(0).toString(16);
+  });
+}
+
+//url数据获取
+function urlData(url) {
+	var u = url.split("?");
+	if (typeof(u[1]) == "string") {
+		u = u[1].split("&");
+		var get = {};
+		for (var i in u) {
+			var j = u[i].split("=");
+			get[j[0]] = j[1];
+		}
+		return get;
+	} else {
+		return {};
+	}
+}
+//获取url指定name参数
+function GetQueryStringRegExp(name,url) {
+var reg = new RegExp("(^|\?|&)" + name + "=([^&]*)(\s|&|$)", "i");
+if (reg.test(url)) return decodeURIComponent(RegExp.$2.replace(/+/g, " ")); return "";
+}　

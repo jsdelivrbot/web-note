@@ -57,6 +57,7 @@ function getProperty(obj, prop) {
 ```
 
 **new**
+
 new 运算符接受一个函数 F 及其参数：new F(arguments...)。这一过程分为三步：
 
 创建类的实例。这步是把一个空的对象的 __proto__ 属性设置为 F.prototype 。

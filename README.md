@@ -12,7 +12,7 @@
 > 学习参考链接：[MDN](https://developer.mozilla.org/en-US/docs/Web)
 
 
-**本个人web笔记，主要记录一些学习中随记、随想，并不会详细记录各个知识点。**
+**个人web笔记，主要记录一些学习中随记、随想，并不会详细记录各个知识点。**
 
 - 浏览器渲染机制：[浏览器的工作原理：新式网络浏览器幕后揭秘](https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/#1_1)
 - js禅意花园：[javascript](https://bonsaiden.github.io/JavaScript-Garden/zh/#intro)
