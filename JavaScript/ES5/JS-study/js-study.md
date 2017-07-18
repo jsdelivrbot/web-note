@@ -7,3 +7,5 @@
 
 [原型继承](http://www.ruanyifeng.com/blog/2011/06/designing_ideas_of_inheritance_mechanism_in_javascript.html)
 [原型重要性](https://segmentfault.com/a/1190000002596600)
+
+[深入理解JavaScript](http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html)
