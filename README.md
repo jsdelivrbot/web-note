@@ -17,6 +17,7 @@
 - 浏览器渲染机制：[浏览器的工作原理：新式网络浏览器幕后揭秘](https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/#1_1)
 - js禅意花园：[javascript](https://bonsaiden.github.io/JavaScript-Garden/zh/#intro)
 - 深入理解JavaScript系列：[汤姆大叔的博客](http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html)
+- Base64编码与解码：[详解Base64编码和解码](https://my.oschina.net/goal/blog/201032)
 
 ## 网站博客
 - [stackoverflow](https://stackoverflow.com/)
