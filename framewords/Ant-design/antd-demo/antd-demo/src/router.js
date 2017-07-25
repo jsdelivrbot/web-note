@@ -25,61 +25,68 @@ function requireAuth(nextState, replace) {
 }
 
 
-//function RouterConfig({ history, app }) {
-//return (
-//  <Router history={history}>
-//    <Route
-//	      path='/'
-//	      onEnter={(...args) => {
-//	        requireAuth(...args)
-//	      }}
-//	      component={App}
-//	    >
-//	    <IndexRedirect to="/home" />
-//    <Route
-//    	path="home" 
-//    	getComponent={(location, cb) => {
-//	        require.ensure([], require => {
-//	        	registerModel(app, require('./models/home'))
-////	          cb(null, { component: require('./routes/home/') })
-//	          cb(null, require('./routes/home/').default)
-//	        })
-//    }} />
-//	    </Route>
-//  </Router>
-//);
-//}
-
-const Routers = function ({ history, app }) {
-  const routes = [
-    {
-      path: '/',
-      component: App,
-      onEnter (...args){
-        requireAuth(...args)
-      },
-      getIndexRoute (nextState, cb) {
-        require.ensure([], require => {
-          registerModel(app, require('./models/home'))
-          cb(null, { component: require('./routes/home/') })
-        }, 'home')
-      },
-      childRoutes: [
-        {
-          path: 'home',
-          getComponent (nextState, cb) {
-            require.ensure([], require => {
-              registerModel(app, require('./models/home'))
-              cb(null, require('./routes/home/'))
-            }, 'home')
-          }
-        }
-      ],
-    },
-  ]
-
-  return <Router history={history} routes={routes} />
+function Routers({ history, app }) {
+	return (
+    <Router history={history}>
+    	<Route
+	      path='/'
+	      onEnter={(...args) => {
+	        requireAuth(...args)
+	      }}
+	      component={App}
+	    >
+		    <IndexRedirect to="/home" />
+	      <Route 
+	      	path="home" 
+	      	getComponent={(nextState, cb) => {
+		        require.ensure([], require => {
+		        	registerModel(app, require('./models/home'))
+		          cb(null, require('./routes/home/'))
+		        })
+      	}} />
+      	<Route 
+	      	path="login" 
+	      	getComponent={(nextState, cb) => {
+		        require.ensure([], require => {
+		        	registerModel(app, require('./models/login'))
+		          cb(null, require('./routes/login/'))
+		        })
+      	}} />
+	    </Route>
+    </Router>
+	);
 }
+
+//const Routers = function ({ history, app }) {
+//const routes = [
+//  {
+//    path: '/',
+//    component: App,
+//    onEnter (...args){
+//      requireAuth(...args)
+//    },
+//    getIndexRoute (nextState, cb) {
+//      require.ensure([], require => {
+//        registerModel(app, require('./models/home'))
+//        cb(null, { component: require('./routes/home/') })
+//      }, 'home')
+//    },
+//    childRoutes: [
+//      {
+//        path: 'home',
+//        getComponent (nextState, cb) {
+//          require.ensure([], require => {
+//            registerModel(app, require('./models/home'))
+//            cb(null, require('./routes/home/'))
+//          }, 'home')
+//        }
+//      }
+//    ],
+//  },
+//]
+//
+//return <Router history={history} routes={routes} />
+//}
 
 Routers.propTypes = {
   history: PropTypes.object,
