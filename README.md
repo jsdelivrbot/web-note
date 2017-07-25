@@ -18,7 +18,7 @@
 - js禅意花园：[javascript](https://bonsaiden.github.io/JavaScript-Garden/zh/#intro)
 - 深入理解JavaScript系列：[汤姆大叔的博客](http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html)
 - Base64编码与解码：[详解Base64编码和解码](https://my.oschina.net/goal/blog/201032)
-
+- 面试及算法：[编程之法：面试和算法心得](https://wizardforcel.gitbooks.io/the-art-of-programming-by-july/content/)
 ## 网站博客
 - [stackoverflow](https://stackoverflow.com/)
 国外技术问答社区，一般在遇到问题 google 该问题的英文关键字，可在该网站找到答案
@@ -61,3 +61,8 @@ HTML5 CSS3 相关的知识可以翻阅
 
 ## 博客借鉴
 - [My Coding Life](http://bin-playground.top/#/)
+
+>古人云：学而不思则罔，思而不学则殆。在我看来编程与写作其实并不冲突，编程是一个学习与探究的过程，而写作则是一个分享与记录的过程，只有举一反三，方能为师矣。
+
+## 
+
