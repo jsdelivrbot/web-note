@@ -5,9 +5,12 @@ import { connect } from 'dva'
 import './app.less'
 
 const App = ({ children, dispatch, app, loading, location }) => {
- 
+  let { pathname } = location
+  pathname = pathname.startsWith('/') ? pathname : `/${pathname}`
+  
   return (
     <div>
+    	
       {children}
     </div>
   )

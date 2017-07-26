@@ -3,14 +3,12 @@ const APIV2 = '/api/v2'
 
 module.exports = {
   name: 'AntD Demo',
-  prefix: 'antdAdmin',
-  footerText: 'Ant Design Admin  © 2017 zuiidea',
+  prefix: 'antdDemo',
+  footerText: 'Ant Design && Dva  Demo  © 2017 NARUTOne',
   logo: '/code.png',
-  iconFontCSS: '/iconfont.css',
-  iconFontJS: '/iconfont.js',
-  YQL: ['http://www.zuimeitianqi.com'],
+  YQL: [],
   CORS: [],
-  openPages: ['/login'],
+  openPages: ['/login', '/home'],
   apiPrefix: '/api/v1',
   api: {
     userLogin: `${APIV1}/user/login`,
@@ -19,9 +17,6 @@ module.exports = {
     users: `${APIV1}/users`,
     posts: `${APIV1}/posts`,
     user: `${APIV1}/user/:id`,
-    dashboard: `${APIV1}/dashboard`,
     menus: `${APIV1}/menus`,
-    v1test: `${APIV1}/test`,
-    v2test: `${APIV2}/test`,
   },
 }
