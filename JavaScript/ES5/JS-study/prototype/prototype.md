@@ -181,6 +181,8 @@ var author = Person.new.apply(Person,['Aadit','Shah']) ;
 
 ## 总结大法
 
+>完全继承复制，独成一系
+
 ```js
 var deepClone = function(source,target){
     source = source || {} ;
