@@ -4,11 +4,12 @@ const APIV2 = '/api/v2'
 module.exports = {
   name: 'AntD Demo',
   prefix: 'antdDemo',
-  footerText: 'Ant Design && Dva  Demo  © 2017 NARUTOne',
+  footerText: 'Ant Design && Dva  Demo  © 2017 by NARUTOne',
   logo: '/code.png',
   YQL: [],
   CORS: [],
-  openPages: ['/login', '/home'],
+  openPages: ['/login'],
+  homePages: ['/home'],
   apiPrefix: '/api/v1',
   api: {
     userLogin: `${APIV1}/user/login`,

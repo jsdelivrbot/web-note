@@ -52,6 +52,13 @@ function Routers({ history, app }) {
 		          cb(null, require('./routes/login/'))
 		        })
       	}} />
+      	<Route 
+	      	path="*" 
+	      	getComponent={(nextState, cb) => {
+		        require.ensure([], require => {
+		          cb(null, require('./routes/error/'))
+		        })
+      	}} />
 	    </Route>
     </Router>
 	);

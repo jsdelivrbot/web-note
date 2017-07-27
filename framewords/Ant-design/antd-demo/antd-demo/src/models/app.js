@@ -1,6 +1,7 @@
 import { query, logout } from '../services/app'
 import { routerRedux } from 'dva/router'
 import config from 'config'
+import { parse } from 'qs'
 
 export default {
 	namespace: 'app',
@@ -49,6 +50,11 @@ export default {
 		
 	},
 	reducers: {
-		
+		updateState (state, { payload }) {
+      return {
+        ...state,
+        ...payload,
+      }
+    },
 	}
 }

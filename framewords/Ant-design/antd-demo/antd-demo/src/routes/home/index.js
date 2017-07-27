@@ -1,16 +1,18 @@
 import React from 'react';
 import { connect } from 'dva';
-import styles from './index.css';
+import styles from './index.less';
+import { config } from 'utils'
+import {Button} from 'antd'
 
 function Home() {
   return (
     <div className={styles.normal}>
-      <h1 className={styles.title}>Yay! Welcome to dva!</h1>
-      <div className={styles.welcome} />
-      <ul className={styles.list}>
-        <li>To get started, edit <code>src/index.js</code> and save to reload.</li>
-        <li><a href="https://github.com/dvajs/dva-docs/blob/master/v1/en-us/getting-started.md">Getting Started</a></li>
-      </ul>
+    	<h1 className={styles.logo}>
+    		<img alt={'logo'} src={config.logo} />
+        <span>{config.name}</span>
+    	</h1>
+      <p className={styles.title}>Yay! Welcome to antd dva demo!</p>
+      <Button className={styles.home_go} type="primary" icon='smile-o'> Let's go </Button>
     </div>
   );
 }

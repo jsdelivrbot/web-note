@@ -109,7 +109,7 @@ const fetch = (options) => {
 }
 
 export default function request (options) {
-	debugger
+	
   if (options.url && options.url.indexOf('//') > -1) {
     const origin = `${options.url.split('//')[0]}//${options.url.split('//')[1].split('/')[0]}`
     if (window.location.origin !== origin) {
