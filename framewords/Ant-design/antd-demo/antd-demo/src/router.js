@@ -45,6 +45,14 @@ function Routers({ history, app }) {
 		        })
       	}} />
       	<Route 
+	      	path="dashboard" 
+	      	getComponent={(nextState, cb) => {
+		        require.ensure([], require => {
+		        	registerModel(app, require('./models/dashboard'))
+		          cb(null, require('./routes/Dashboard/'))
+		        })
+      	}} />
+      	<Route 
 	      	path="login" 
 	      	getComponent={(nextState, cb) => {
 		        require.ensure([], require => {

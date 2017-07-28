@@ -7,6 +7,7 @@ export default {
 	namespace: 'app',
 	state: {
 		user: {},
+		isCollapsed: false,
 	},
 	subscriptions: {
 //		setup ({ dispatch }) {
@@ -56,5 +57,11 @@ export default {
         ...payload,
       }
     },
+    toggle (state, { payload }) {
+     	return {
+        ...state,
+        isCollapsed: payload.isCollapsed,
+      }
+  	}
 	}
 }

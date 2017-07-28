@@ -1,7 +1,7 @@
 import Loader from './Loader'
-import * as Layout from './Layout/index.js'
+import * as Layoutx from './Layoutx/index.js'
 
 export {
-  Layout,
+  Layoutx,
   Loader
  }
