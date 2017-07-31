@@ -1,4 +1,5 @@
 import { query, logout } from '../services/app'
+import * as menusService from '../services/menus'
 import { routerRedux } from 'dva/router'
 import config from 'config'
 import { parse } from 'qs'
@@ -8,6 +9,14 @@ export default {
 	state: {
 		user: {},
 		isCollapsed: false,
+		menu: [
+      {
+        id: 1,
+        icon: 'laptop',
+        name: 'Dashboard',
+        router: '/dashboard',
+      },
+    ],
 	},
 	subscriptions: {
 //		setup ({ dispatch }) {
@@ -21,10 +30,14 @@ export default {
     }, { call, put }) {
       const { success, user } = yield call(query, payload)
       if (success && user) {
+      	const { list } = yield call(menusService.query)
+      	
+      	let menu = list
         yield put({
           type: 'updateState',
           payload: {
-            user
+            user,
+            menu
           },
         })
         if (location.pathname === '/login') {

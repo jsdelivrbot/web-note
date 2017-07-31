@@ -51,7 +51,7 @@ HTML5 CSS3 相关的知识可以翻阅
 - [jsFiddle](https://jsfiddle.net/)
 在线编辑web测试开发
 
-## UI组件
+## UI库、框架
 
 ### React
 
@@ -61,7 +61,13 @@ HTML5 CSS3 相关的知识可以翻阅
 
 ### vue
 
--[iview](https://www.iviewui.com/)
+- [iview](https://www.iviewui.com/)
+
+## 规范
+
+> 咱们自古就有无规矩不成方圆，代码、文档编写，项目的开发等都是需要规范的，有规范才能更好的一起拥抱未来。
+
+- [文档与源码编写风格](https://github.com/fex-team/styleguide)
 
 ## 借鉴
 

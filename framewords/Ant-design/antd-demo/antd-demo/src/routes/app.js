@@ -9,7 +9,7 @@ import './app.less'
 import '../themes/index.less'
 
 const { prefix, homePages, openPages } = config
-const { Header, Footer, styles } = Layoutx
+const { Header, Footer, Menux, styles } = Layoutx
 
 const {Sider, Content } = Layout;
 
@@ -17,7 +17,7 @@ const {Sider, Content } = Layout;
 let lastHref
 
 const App = ({ children, dispatch, app, loading, location }) => {
-	const {user, isCollapsed} = app
+	const {user, isCollapsed, menu} = app
   let { pathname } = location
   pathname = pathname.startsWith('/') ? pathname : `/${pathname}`
   const href = window.location.href
@@ -28,6 +28,10 @@ const App = ({ children, dispatch, app, loading, location }) => {
       dispatch({ type: 'app/logout' })
     }
   }
+	
+	const menuProps = {
+		menu
+	}
 	
 	const toggle = () => {
     dispatch({ type: 'app/toggle', payload: { isCollapsed: !isCollapsed } })
@@ -62,21 +66,7 @@ const App = ({ children, dispatch, app, loading, location }) => {
         collapsible
         collapsed={isCollapsed}
       >
-        <div className="logo" />
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
-          <Menu.Item key="1">
-            <Icon type="user" />
-            <span>nav 1</span>
-          </Menu.Item>
-          <Menu.Item key="2">
-            <Icon type="video-camera" />
-            <span>nav 2</span>
-          </Menu.Item>
-          <Menu.Item key="3">
-            <Icon type="upload" />
-            <span>nav 3</span>
-          </Menu.Item>
-        </Menu>
+        <Menux {...menuProps}/>
       </Sider>
       <Layout>
         <Header {...headerProps} />
@@ -87,7 +77,7 @@ const App = ({ children, dispatch, app, loading, location }) => {
           />
         </div>
         <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
-          {children}
+          <div className={styles.app_content}>{children}</div>
         </Content>
         <Footer />
       </Layout>
