@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.box {
+  height: 100vh;
+  background-color: #efefef;
+  display: flex;
+}
+
+.box > div {
+  height: 100px;
+}
+
+.bg-red {
+  background: #e4393c;
+}
+.bg-wran {
+  background: orange;
+}
+.bg-success {
+  background: #690
+}
+
+.flex-1 {  
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}

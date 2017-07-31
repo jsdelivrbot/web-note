@@ -1,6 +1,6 @@
 # web 前端
 
-[![web-note](https://img.shields.io/badge/web--note-0.0.1-green.svg)](https://github.com/NARUTOne/web-note)
+[![web-note](https://img.shields.io/badge/web--note-0.2-green.svg)](https://github.com/NARUTOne/web-note)
 
 
 > 总体参考：JavaScript权威指南，JavaScript高级程序设计
