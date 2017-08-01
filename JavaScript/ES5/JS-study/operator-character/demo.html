@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js 操作符</title>
+		<style type="text/css">
+			body {
+		    width: 896px;
+		    min-height: calc(100vh - 48px);
+		    margin: 0 auto;
+		    padding: 24px 16px;
+		    background: #fefefe;
+		    color: rgb(60,60,60);
+		    -webkit-text-size-adjust: 100%;
+		  }
+			script {
+				display: block;
+		    white-space: pre;
+		    text-shadow: none;
+		    background: #333;
+		    border-radius: 6px;
+		    color: #fff;
+		    font-family: monaco, courier, monospace;
+		    padding: 10px;
+		    margin-top: 16px;
+		    max-height: 60vh;
+		    overflow-y: auto;
+			}
+			script::before {
+			  content: 'Source:';
+			  color: #0f0;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>js 操作符</h3>
+	</body>
+	<script>
+		// 递增、递减
+		var num1 = 2;
+		var num2 = 20;
+		
+		console.log(num1-- + num2);
+		console.log(num1 + num2);
+		
+		console.log(--num1 + num2);
+		console.log(num1 + num2);
+		
+		console.log(num1++ + num2);
+		console.log(num1 + num2);
+		
+		console.log(++num1 + num2);
+		console.log(num1 + num2);
+		
+		var str1 = '2';
+		var str2 = 'a';
+		str1 --;
+		str2 ++;
+		console.log(str1);
+		console.log(str2);
+		
+		
+		var o = {
+			valueOf: () => {
+				return -1;
+			}
+		}
+		var f = 1.1;
+		
+		f--;
+		o--;
+		console.log(f);
+		console.log(o);
+		
+		//按位非 ~ , 底层二进制非操作
+		var n = 23;
+		console.log(~n);
+		console.log(-n - 1);
+		
+		//按位与 & , 底层二进制与操作
+		var result = 25 & 3;
+		console.log(result);
+		
+		//按位或 |， 底层二进制或操作
+		var result = 25 | 3;
+		console.log(result);
+		
+		//按位异或 ^, 单1返1
+		result = 25 ^ 3;
+		console.log(result);
+		
+		//左移<< 
+		var oldValue = 2;
+		console.log(oldValue << 5)
+		
+		//右移>>
+		var oldValue = -64;
+		console.log(oldValue >> 5)
+		
+		//无符号右移 >>>, 真实的负数二进制
+		var oldValue = -64;
+		console.log(oldValue >>> 5)
+	</script>
+	
+	<script>
+		//逻辑操作符 ！ || && ！！
+		
+		!!NaN
+		!NaN && !!null
+		
+		0 || 1
+	</script>
+</html>

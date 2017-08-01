@@ -11,6 +11,7 @@
 
 > 学习参考链接：[MDN](https://developer.mozilla.org/en-US/docs/Web)
 
+- [程序员的自我修养](https://leohxj.gitbooks.io/a-programmer-prepares/content/)
 
 **个人web笔记，主要记录一些学习中随记、随想，并不会详细记录各个知识点。**
 
@@ -82,5 +83,4 @@ HTML5 CSS3 相关的知识可以翻阅
 
 >古人云：学而不思则罔，思而不学则殆。在我看来编程与写作其实并不冲突，编程是一个学习与探究的过程，而写作则是一个分享与记录的过程，只有举一反三，方能为师矣。
 
-## 
 
