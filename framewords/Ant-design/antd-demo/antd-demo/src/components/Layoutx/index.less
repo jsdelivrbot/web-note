@@ -1,5 +1,6 @@
 @import "../../themes/vars.less";
 .slider_btn {
+    display: inline-block;
     width: 47px;
     height: 47px;
     line-height: 47px;
@@ -18,5 +19,16 @@
        height: ~"calc(100vh - 203px)";
        min-height: ~"calc(100vh - 203px)"; 
        overflow-y: auto;
+       background: transparent !important;
+       margin: 8px 16px !important;
     }
+}
+
+.homeBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
 }

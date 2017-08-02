@@ -28,11 +28,14 @@ export default {
 		*query ({
       payload,
     }, { call, put }) {
-      const { success, user } = yield call(query, payload)
+    	
+      const { success, user } = yield call(query, payload)      
       if (success && user) {
+      	
       	const { list } = yield call(menusService.query)
       	
       	let menu = list
+      	
         yield put({
           type: 'updateState',
           payload: {

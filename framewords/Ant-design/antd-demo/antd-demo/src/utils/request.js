@@ -136,7 +136,7 @@ export default function request (options) {
       success: true,
       message: statusText,
       statusCode: status,
-      ...data,
+      ...data
     }
   }).catch((error) => {
     const { response } = error

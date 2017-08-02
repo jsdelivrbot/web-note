@@ -2,14 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'dva'
 import NProgress from 'nprogress'
-import { classnames, config } from 'utils'
+import { classnames, config, particles_param } from 'utils'
 import { Layoutx, Loader } from 'components'
 import { Layout, Menu, Icon } from 'antd';
+import Particles from 'react-particles-js'
 import './app.less'
 import '../themes/index.less'
 
 const { prefix, homePages, openPages } = config
-const { Header, Footer, Menux, styles } = Layoutx
+const { Header, Footer, Menux, Bread, styles } = Layoutx
 
 const {Sider, Content } = Layout;
 
@@ -33,6 +34,10 @@ const App = ({ children, dispatch, app, loading, location }) => {
 		menu
 	}
 	
+	const breadProps = {
+		menu
+	}
+	
 	const toggle = () => {
     dispatch({ type: 'app/toggle', payload: { isCollapsed: !isCollapsed } })
   }
@@ -53,9 +58,12 @@ const App = ({ children, dispatch, app, loading, location }) => {
   }
   if (homePages && homePages.includes(pathname)) {
     return (<div>
-      <Header {...headerProps} />
-      {children}
-      <Footer />
+    	<Particles width={'100%'} height={'100%'} params={particles_param}/>
+      <div className={styles.homeBox}>
+      	<Header {...headerProps} />
+      	{children}
+      	<Footer />
+      </div>
     </div>)
   }
   
@@ -70,12 +78,16 @@ const App = ({ children, dispatch, app, loading, location }) => {
       </Sider>
       <Layout>
         <Header {...headerProps} />
-        <div className={styles.slider_btn} onClick={toggle}>
-          <Icon
-            className="trigger"
-            type={isCollapsed ? 'menu-unfold' : 'menu-fold'}
-          />
+        <div>
+        	<div className={styles.slider_btn} onClick={toggle}>
+	          <Icon
+	            className="trigger"
+	            type={isCollapsed ? 'menu-unfold' : 'menu-fold'}
+	          />
+	        </div>
+	        <Bread {...breadProps}/>
         </div>
+        
         <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
           <div className={styles.app_content}>{children}</div>
         </Content>

@@ -3,6 +3,9 @@ import request from './request'
 import classnames from 'classnames'
 import { color } from './theme'
 import lodash from 'lodash'
+import {particles_param} from './particles-param'
+import {tools} from './tools'
+import shouldComponentUpdate from './shouldComponentUpdate'
 
 // 连字符转驼峰
 String.prototype.hyphenToHump = function () {
@@ -106,4 +109,6 @@ module.exports = {
   queryURL,
   queryArray,
   arrayToTree,
+  particles_param,
+  tools
 }
