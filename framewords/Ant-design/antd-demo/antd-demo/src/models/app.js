@@ -19,10 +19,10 @@ export default {
     ],
 	},
 	subscriptions: {
-//		setup ({ dispatch }) {
-//			//登录验证
-//    dispatch({ type: 'query' })
-//  },
+		setup ({ dispatch }) {
+			//登录验证
+      dispatch({ type: 'query' })
+    },
 	},
 	effects: {
 		*query ({

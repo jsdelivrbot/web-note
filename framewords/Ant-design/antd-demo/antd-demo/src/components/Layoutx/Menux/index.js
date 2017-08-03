@@ -43,7 +43,7 @@ const Menux = ({menu}) => {
 	return (
 		<div>
       <div className={styles.sider_logo}>
-        <img alt={'logo'} src={config.logo} />
+        <Link to="/" ><img alt={'logo'} src={config.logo} /></Link>
       </div>
       <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
         {menuItems}

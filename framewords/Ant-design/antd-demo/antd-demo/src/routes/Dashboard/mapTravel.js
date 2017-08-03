@@ -256,7 +256,7 @@ module.exports = {
     title : {
         text: '模拟迁徙',
         subtext: '数据纯属虚构',
-        left: 'center',
+        left: 'left',
         textStyle : {
             color: '#fff'
         }

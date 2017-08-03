@@ -58,7 +58,7 @@ const App = ({ children, dispatch, app, loading, location }) => {
   }
   if (homePages && homePages.includes(pathname)) {
     return (<div>
-    	<Particles width={'100%'} height={'100%'} params={particles_param}/>
+    	<Particles width={'100%'} height={'100vh'} params={particles_param}/>
       <div className={styles.homeBox}>
       	<Header {...headerProps} />
       	{children}
@@ -70,7 +70,9 @@ const App = ({ children, dispatch, app, loading, location }) => {
   return (
     <Layout>
       <Sider
-        trigger={null}
+				breakpoint='md'
+				collapsedWidth="0"
+				trigger={null}
         collapsible
         collapsed={isCollapsed}
       >

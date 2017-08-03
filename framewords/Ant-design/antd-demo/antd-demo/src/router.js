@@ -53,6 +53,14 @@ function Routers({ history, app }) {
 		        })
       	}} />
       	<Route 
+	      	path="user" 
+	      	getComponent={(nextState, cb) => {
+		        require.ensure([], require => {
+		        	registerModel(app, require('./models/user'))
+		          cb(null, require('./routes/user/'))
+		        })
+      	}} />
+      	<Route 
 	      	path="login" 
 	      	getComponent={(nextState, cb) => {
 		        require.ensure([], require => {

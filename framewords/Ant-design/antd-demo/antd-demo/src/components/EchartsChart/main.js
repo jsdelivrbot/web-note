@@ -12,8 +12,13 @@ class Chart extends Component {
     this.config = config;
     this.container = config.container;
     
-    if(this.config.showMapName) {
-    	const _this = this
+    this.init()
+  }
+  
+  init() {
+  	const _this = this
+  	if(_this.config.showMapName) {
+    	
     	async function getMap(){
 			  return request({
 			    url: `/data/map/${_this.config.showMapName}.json`,
@@ -25,11 +30,17 @@ class Chart extends Component {
     	getMap().then(res => {
     		console.log(res)    		
 				res && echarts.registerMap(_this.config.showMapName, res);
+				_this.renderChart()
 			});		
 			
     }
-    
-    const myChart = echarts.init(this.container);
+  	else {
+  		_this.renderChart()
+  	}
+  }
+  
+  renderChart() {
+  	const myChart = echarts.init(this.container);
 
     if(this.config.options && !tools.emptyObj(this.config.options)) {
       this.config.options.color = ['#64ea91','#8fc9fb', '#d897eb', '#f69899', '#f8c82e','#f797d6',  '#ca8622', '#bda29a','#6e7074', '#546570', '#c4ccd3']
@@ -50,7 +61,6 @@ class Chart extends Component {
       }
     }  
   }
-  
 }
 
 Chart.PropTypes = {

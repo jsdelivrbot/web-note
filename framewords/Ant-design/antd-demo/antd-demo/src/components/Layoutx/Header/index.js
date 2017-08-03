@@ -19,7 +19,7 @@ const Header = ({user, logout, location}) => {
             <span>{config.name}</span>
           </Link>
 	      </Col>
-	      <Col span={2} offset={14} className={styles.header__right}>
+	      <Col  className={styles.header__right}>
 	      	<Menu mode="horizontal" onClick={handleClickMenu}>
 	          <SubMenu style={{
 	            float: 'right',
