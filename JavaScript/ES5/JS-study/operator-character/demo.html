@@ -110,4 +110,116 @@
 		
 		0 || 1
 	</script>
+	<script>
+		//乘性操作符 * /
+		
+		2 * 5
+		
+		2 * -5
+		
+		2 * NaN
+		
+		2 * '23a' //NaN
+		
+		2 * '23' //46
+		
+		Infinity * 0 //NaN
+		
+		0 / 0
+		
+		console.log(1 / NaN) //NaN 
+		
+		Infinity / 2  //Infinity
+		
+		Infinity / Infinity  //NaN		
+		
+		//加性 操作符类似，但注意  字符串拼接
+		
+		5 + '2'   //'52'
+
+		console.log('sum:' + 2 + 5)
+		console.log('sum:' + (2 + 5))
+		
+		//注意减号 不一样规则
+		
+		5 - true  // 4
+		
+		NaN - 1 // NaN
+		
+		Boolean(NaN) - 1 // -1
+		
+		5 - ''  // 5
+		
+		5 - '2' // 3
+		
+		5 - null  // 5
+		
+		'23' - 1  //22
+		
+		'23a' - 0 // NaN		
+		
+	</script>
+	
+	<script>
+		/**
+		 * 关系操作符  ，> < >= <= 
+		 * @return , boolean
+		 */
+		
+		// 字符串比较， 依次比较两字符串，字符的字符编码值
+		
+		'Blank' < 'alphabet'  // true
+		
+		'23' < '3' //true
+		
+		// 字符串，数值比较， 转换为数值比较
+		'23' < 3 // false
+		
+		'a' < 3  //false 
+		
+		//NaN 比较， 任何与NaN比较都返回false
+		
+		/**
+		 * 相等 操作符
+		 * 
+		 * == , != : 先转换再比较
+		 * 
+		 * === , !== : 仅比较不转换
+		 */
+		
+		//相等，不相等  == !=
+		
+		null == undefined   // true
+		
+		NaN == NaN  // false 
+		
+		NaN != NaN //true
+		
+		true == 1 // true 
+		
+		null == 0 //false
+		
+		'3' == 3 //true 
+		
+		
+		//全等，全不等  ===  !==
+		
+		'3' === 3 //false
+		
+		null === undefined  //false
+		
+		
+		// 逗号操作符
+		
+		var num = 1, num2 = 2;
+		
+		var arr = (23, 0 , 1, null) //结果为最后一项  null 
+		
+		
+		// 赋值操作符
+		
+		num += 1 
+		
+	</script>
+	
 </html>

@@ -6,6 +6,7 @@
 - [阮一峰ES6](http://es6.ruanyifeng.com/)
 - [ES6新特性](https://blog.oyanglul.us/javascript/essential-ecmascript6.html)
 - [ES6十大特性](http://web.jobbole.com/87140/)
+- [ES6学习笔记](https://github.com/hyy1115/ES6-learning)
 
 ## History
 
