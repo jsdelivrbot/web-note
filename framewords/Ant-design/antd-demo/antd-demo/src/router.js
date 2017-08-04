@@ -61,6 +61,37 @@ function Routers({ history, app }) {
 		        })
       	}} />
       	<Route 
+	      	path="user/:id" 
+	      	getComponent={(nextState, cb) => {
+		        require.ensure([], require => {
+		        	registerModel(app, require('./models/user/detail'))
+		          cb(null, require('./routes/user/detail/'))
+		        })
+      	}} />
+      	<Route path='recharts'>
+      		<Route 
+		      	path="lineChart" 
+		      	getComponent={(nextState, cb) => {
+			        require.ensure([], require => {
+			          cb(null, require('./routes/recharts/LineChart/'))
+			        })
+	      	}} />
+	      	<Route 
+		      	path="barChart" 
+		      	getComponent={(nextState, cb) => {
+			        require.ensure([], require => {
+			          cb(null, require('./routes/recharts/barChart/'))
+			        })
+	      	}} />
+	      	<Route 
+		      	path="areaChart" 
+		      	getComponent={(nextState, cb) => {
+			        require.ensure([], require => {
+			          cb(null, require('./routes/recharts/areaChart/'))
+			        })
+	      	}} />
+      	</Route>
+      	<Route 
 	      	path="login" 
 	      	getComponent={(nextState, cb) => {
 		        require.ensure([], require => {

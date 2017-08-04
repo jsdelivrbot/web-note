@@ -14,7 +14,6 @@ const { Header, Footer, Menux, Bread, styles } = Layoutx
 
 const {Sider, Content } = Layout;
 
-
 let lastHref
 
 const App = ({ children, dispatch, app, loading, location }) => {

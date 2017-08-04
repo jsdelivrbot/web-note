@@ -7,11 +7,32 @@ import { Row, Col, Popconfirm, Button } from 'antd'
 
 import Filter from './Filter'
 import List from './List'
+import Add from './Add'
 
 const User = ({dispatch, user, location, loading}) => {
 	
 	const { list, pagination, currentItem, modalVisible, modalType, selectedRowKeys } = user
   const { pageSize } = pagination
+  
+  const modalProps = {
+    item: modalType === 'create' ? {} : currentItem,
+    visible: modalVisible,
+    maskClosable: false,
+    confirmLoading: loading.effects['user/update'],
+    title: `${modalType === 'create' ? 'Create User' : 'Update User'}`,
+    wrapClassName: 'vertical-center-modal',
+    onOk (data) {
+      dispatch({
+        type: `user/${modalType}`,
+        payload: data,
+      })
+    },
+    onCancel () {
+      dispatch({
+        type: 'user/hideModal',
+      })
+    },
+  }
 	
 	const filterProps = {
     filter: {},
@@ -103,6 +124,7 @@ const User = ({dispatch, user, location, loading}) => {
          </Row>
       }
 			<List {...listProps} />
+			{modalVisible && <Add {...modalProps} />}
 		</div>
 	)
 }
@@ -110,6 +132,8 @@ const User = ({dispatch, user, location, loading}) => {
 User.PropTypes = {
 	user: PropTypes.object,
 	dispatch: PropTypes.func,
+	location: PropTypes.object,
+	loading: PropTypes.object,
 }
 
 export default connect(({user, loading}) => ({user, loading}))(User)

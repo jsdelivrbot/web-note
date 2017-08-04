@@ -34,7 +34,7 @@ let database = [
     mpid: '5',
     name: 'LineChart',
     icon: 'line-chart',
-    route: '/chart/lineChart',
+    route: '/recharts/lineChart',
   },
   {
     id: '52',
@@ -42,7 +42,7 @@ let database = [
     mpid: '5',
     name: 'BarChart',
     icon: 'bar-chart',
-    route: '/chart/barChart',
+    route: '/recharts/barChart',
   },
   {
     id: '53',
@@ -50,7 +50,7 @@ let database = [
     mpid: '5',
     name: 'AreaChart',
     icon: 'area-chart',
-    route: '/chart/areaChart',
+    route: '/recharts/areaChart',
   },
 ]
 
