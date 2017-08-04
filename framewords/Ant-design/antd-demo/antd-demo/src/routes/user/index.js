@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'dva'
 import { routerRedux } from 'dva/router'
 import styles from './index.less'
-import { Row, Col } from 'antd'
+import { Row, Col, Popconfirm, Button } from 'antd'
 
 import Filter from './Filter'
 import List from './List'
@@ -79,9 +79,29 @@ const User = ({dispatch, user, location, loading}) => {
     },
   }
 	
+	const handleDeleteItems = () => {
+    dispatch({
+      type: 'user/multiDelete',
+      payload: {
+        ids: selectedRowKeys,
+      },
+    })
+  }
+	
 	return (
 		<div className='content-inner'>
 			<Filter {...filterProps}/>
+			{
+        selectedRowKeys.length > 0 &&
+         <Row style={{ marginBottom: 24, textAlign: 'right', fontSize: 13 }}>
+           <Col>
+             {`Selected ${selectedRowKeys.length} items `}
+             <Popconfirm title={'Are you sure delete these items?'} placement="left" onConfirm={handleDeleteItems}>
+               <Button type="primary" size="large" style={{ marginLeft: 8 }}>Remove</Button>
+             </Popconfirm>
+           </Col>
+         </Row>
+      }
 			<List {...listProps} />
 		</div>
 	)
