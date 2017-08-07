@@ -43,3 +43,34 @@
     min-height: e("calc(100vh - 203px)");
   }
 }
+
+.popovermenu {
+  width: 280px;
+  margin-left: 6px;
+
+  :global .ant-popover-inner-content {
+    padding: 0;
+
+    .ant-menu-inline .ant-menu-item,
+    .ant-menu-vertical .ant-menu-item {
+      border-right: 0;
+      height: 48px;
+      line-height: 48px;
+    }
+
+    .ant-menu-inline .ant-menu-item-selected,
+    .ant-menu-inline .ant-menu-selected {
+      border-right: 0;
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+    :global {
+        .ant-layout-sider {
+           
+        }
+    }
+    
+}

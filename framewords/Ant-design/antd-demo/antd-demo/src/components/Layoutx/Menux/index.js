@@ -5,7 +5,7 @@ import { Menu, Icon } from 'antd';
 import { Link } from 'dva/router'
 import { arrayToTree, queryArray, config } from 'utils'
 
-const Menux = ({menu}) => {
+const Menux = ({menu, handleClickNavMenu}) => {
 	// 生成树状
   const menuTree = arrayToTree(menu.filter(_ => _.mpid !== '-1'), 'id', 'mpid')
   const levelMap = {}
@@ -45,7 +45,7 @@ const Menux = ({menu}) => {
       <div className={styles.sider_logo}>
         <Link to="/" ><img alt={'logo'} src={config.logo} /></Link>
       </div>
-      <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+      <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']} onClick={handleClickNavMenu}>
         {menuItems}
       </Menu>
     </div>
@@ -54,6 +54,7 @@ const Menux = ({menu}) => {
 
 Menux.propTypes = {
   menu: PropTypes.array,
+  handleClickNavMenu: PropTypes.func,
 }
 
 export default Menux

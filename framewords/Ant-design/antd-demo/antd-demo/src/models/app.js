@@ -17,11 +17,21 @@ export default {
         router: '/dashboard',
       },
     ],
+    isNavbar: document.body.clientWidth < 769,
 	},
 	subscriptions: {
 		setup ({ dispatch }) {
 			//登录验证
       dispatch({ type: 'query' })
+      
+      // 移动 端导航
+      let tid
+      window.onresize = () => {
+        clearTimeout(tid)
+        tid = setTimeout(() => {
+          dispatch({ type: 'changeNavbar' })
+        }, 300)
+      }
     },
 	},
 	effects: {
@@ -64,6 +74,15 @@ export default {
         throw (data)
       }
     },
+     *changeNavbar ({
+      payload,
+    }, { put, select }) {
+      const { app } = yield(select(_ => _))
+      const isNavbar = document.body.clientWidth < 769
+      if (isNavbar !== app.isNavbar) {
+        yield put({ type: 'handleNavbar', payload: isNavbar })
+      }
+    },
 		
 	},
 	reducers: {
@@ -78,6 +97,12 @@ export default {
         ...state,
         isCollapsed: payload.isCollapsed,
       }
-  	}
+  	},
+  	handleNavbar (state, { payload }) {
+      return {
+        ...state,
+        isNavbar: payload,
+      }
+    },
 	}
 }

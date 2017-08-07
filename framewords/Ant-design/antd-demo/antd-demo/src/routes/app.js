@@ -4,7 +4,7 @@ import { connect } from 'dva'
 import NProgress from 'nprogress'
 import { classnames, config, particles_param } from 'utils'
 import { Layoutx, Loader } from 'components'
-import { Layout, Menu, Icon } from 'antd';
+import { Layout, Menu, Icon, Popover } from 'antd';
 import Particles from 'react-particles-js'
 import './app.less'
 import '../themes/index.less'
@@ -17,7 +17,7 @@ const {Sider, Content } = Layout;
 let lastHref
 
 const App = ({ children, dispatch, app, loading, location }) => {
-	const {user, isCollapsed, menu} = app
+	const {user, isCollapsed, menu, isNavbar} = app
   let { pathname } = location
   pathname = pathname.startsWith('/') ? pathname : `/${pathname}`
   const href = window.location.href
@@ -29,17 +29,18 @@ const App = ({ children, dispatch, app, loading, location }) => {
     }
   }
 	
+	const toggle = () => {
+    dispatch({ type: 'app/toggle', payload: { isCollapsed: !isCollapsed } })
+  }
+	
 	const menuProps = {
-		menu
+		menu,
+		handleClickNavMenu: toggle
 	}
 	
 	const breadProps = {
 		menu
-	}
-	
-	const toggle = () => {
-    dispatch({ type: 'app/toggle', payload: { isCollapsed: !isCollapsed } })
-  }
+	}	
   
   if (lastHref !== href) {
     NProgress.start()
@@ -68,7 +69,7 @@ const App = ({ children, dispatch, app, loading, location }) => {
   
   return (
     <Layout>
-      <Sider
+      {!isNavbar ? <Sider
 				breakpoint='md'
 				collapsedWidth="0"
 				trigger={null}
@@ -76,16 +77,24 @@ const App = ({ children, dispatch, app, loading, location }) => {
         collapsed={isCollapsed}
       >
         <Menux {...menuProps}/>
-      </Sider>
+      </Sider> : null}
       <Layout>
         <Header {...headerProps} />
         <div>
-        	<div className={styles.slider_btn} onClick={toggle}>
-	          <Icon
-	            className="trigger"
-	            type={isCollapsed ? 'menu-unfold' : 'menu-fold'}
-	          />
-	        </div>
+        	{isNavbar ? <Popover placement="bottomLeft" onVisibleChange={toggle} visible={isCollapsed} overlayClassName={styles.popovermenu} trigger="click" content={<Menux {...menuProps} />}>
+	          <div className={styles.slider_btn} onClick={toggle}>
+		          <Icon
+		            className="trigger"
+		            type={isCollapsed ? 'menu-unfold' : 'menu-fold'}
+		          />
+		        </div>
+	        </Popover> :
+	        	<div className={styles.slider_btn} onClick={toggle}>
+		          <Icon
+		            className="trigger"
+		            type={isCollapsed ? 'menu-unfold' : 'menu-fold'}
+		          />
+		        </div>}
 	        <Bread {...breadProps}/>
         </div>
         
