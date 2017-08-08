@@ -1,0 +1,120 @@
+body {
+	background-color: #efefef;
+}
+.flex {
+	display: flex;
+	display: -webkit-flex;
+}
+
+.box {
+	padding: 8px 16px;
+	border-radius: 6px;
+	background-color: #eead2e;
+	justify-content: space-around;
+}
+
+.face {
+	margin: 16px;
+  padding: 4px;
+  background-color: #e7e7e7;
+  width: 104px;
+  height: 104px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  box-shadow: inset 0 5px white, inset 0 -5px #bbb, inset 5px 0 #d7d7d7, inset -5px 0 #d7d7d7;
+  border-radius: 10%;
+}
+
+.pip {
+	display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin: 4px;
+  background-color: #333;
+  box-shadow: inset 0 3px #111, inset 0 -3px #555;
+}
+
+.first-pip {
+	justify-content: center;
+	align-items: center;
+}
+
+
+.second-pip {
+	justify-content: space-between;
+}
+
+.second-pip > .pip:nth-child(2) {
+	align-self: flex-end;
+}
+
+.three-pip > .pip:nth-child(2) {
+	align-self: center;
+}
+
+.three-pip > .pip:nth-child(3) {
+	align-self: flex-end;
+}
+
+.four-pip {
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.column {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.five-pip {
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.five-pip > .column:nth-child(2) {
+	justify-content: center;
+}
+
+.six-pip {	
+	justify-content: space-between;
+}
+
+.six-pip > .column {
+	flex-basis: auto;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.Grid {
+	flex-wrap: wrap;
+}
+
+.Grid-cell {
+	height: 100px;
+	background: #fff;
+  flex: 1;
+  text-align: center;
+  line-height: 100px;
+  border-radius: 6px;
+  margin: 8px;
+}
+
+.Grid-cell.u-full {
+  flex: 0 0 100%;
+}
+
+.Grid-cell.u-1of1 {
+  flex: 0 0 10%;
+}
+
+.Grid-cell.u-1of2 {
+  flex: 0 0 20%;
+}
+
+.Grid-cell.u-1of3 {
+  flex: 0 0 33.3333%;
+}
+
+.Grid-cell.u-1of4 {
+  flex: 0 0 40%;
+}

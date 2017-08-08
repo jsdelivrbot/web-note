@@ -2,7 +2,35 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>JS 函数</title>
+		<style type="text/css">
+			body {
+		    width: 896px;
+		    min-height: calc(100vh - 48px);
+		    margin: 0 auto;
+		    padding: 24px 16px;
+		    background: #fefefe;
+		    color: rgb(60,60,60);
+		    -webkit-text-size-adjust: 100%;
+		  }
+			script {
+				display: block;
+		    white-space: pre;
+		    text-shadow: none;
+		    background: #333;
+		    border-radius: 6px;
+		    color: #fff;
+		    font-family: monaco, courier, monospace;
+		    padding: 10px;
+		    margin-top: 16px;
+		    max-height: 60vh;
+		    overflow-y: auto;
+			}
+			script::before {
+			  content: 'Source:';
+			  color: #0f0;
+			}
+		</style>
 	</head>
 	<body>
 	</body>
@@ -19,7 +47,42 @@
 		var foo1 = function foo() {}
 		
 		
-		// 下面2个括弧()都会立即执行
+		//arguments
+		
+		function doAdd(num1, num2) {
+			if(arguments.length == 1) {
+				return (num1 + 10)
+			}
+			else if(arguments.length == 2) {
+				return (arguments[0] + num2)
+			}
+			else {
+				return null
+			}
+		}
+		
+		doAdd()
+		doAdd(10)
+		doAdd(10, 20)
+		
+		// 函数传参方式 ，值传递， 地址值
+		var v1 = []
+		var v2 = {};
+		var v3 = {};
+		function foo(v1, v2, v3)
+		{
+		    v1 = [1];
+		    v2 = [2];
+		    v3 = {a:3}
+		}
+		
+		foo(v1, v2, v3);
+		alert(v1); // 空白
+		alert(v2); // [object Object]
+		alert(v3.a); // undefined
+		
+		
+	// 下面2个括弧()都会立即执行，自执行
 	
 	(function () { /* code */ } ()); // 推荐使用这个
 	(function () { /* code */ })(); // 但是这个也是可以用的
@@ -33,7 +96,7 @@
 	0, function () { /* code */ } ();
 	
 	// 如果你不在意返回值，或者不怕难以阅读
-	// 你甚至可以在function前面加一元操作符号
+	// 你甚至可以在function前面加一元操作符号, 表达式自执行
 	
 	!function () { /* code */ } ();
 	~function () { /* code */ } ();

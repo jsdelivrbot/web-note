@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo flex</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<h3>骰子布局</h3>
+	<div class='flex box'>
+		<div class="face flex first-pip">
+			<span class="pip"></span>
+		</div>
+		<div class="face flex second-pip">
+			<span class="pip"></span>
+			<span class="pip"></span>
+		</div>
+		<div class="face flex three-pip">
+			<span class="pip"></span>
+			<span class="pip"></span>
+			<span class="pip"></span>
+		</div>
+		<div class="face flex four-pip">
+			<div class="column">
+		    <span class="pip"></span>
+		    <span class="pip"></span>
+		  </div>
+		  <div class="column">
+		    <span class="pip"></span>
+		    <span class="pip"></span>
+		  </div>
+		</div>
+		<div class="face flex five-pip">
+			<div class="column">
+		    <span class="pip"></span>
+		    <span class="pip"></span>
+		  </div>
+		  <div class="column">
+		    <span class="pip"></span>
+		  </div>
+		  <div class="column">
+		    <span class="pip"></span>
+		    <span class="pip"></span>
+		  </div>
+		</div>
+		<div class="face flex six-pip">
+			<div class="column">
+		    <span class="pip"></span>
+		    <span class="pip"></span>
+		    <span class="pip"></span>
+		  </div>
+		  <div class="column">
+		  	<span class="pip"></span>
+		    <span class="pip"></span>
+		    <span class="pip"></span>
+		  </div>
+		</div>
+	</div>
+
+	<h3>网格布局</h3>
+	<div class="flex box Grid">
+		<div class="Grid-cell u-full">full</div>
+		<div class="Grid-cell u-1of1">1</div>
+  	<div class="Grid-cell u-1of2">2</div>
+  	<div class="Grid-cell u-1of3">3</div>
+  	<div class="Grid-cell u-1of4">4</div>
+	</div>
+</body>
+</html>
