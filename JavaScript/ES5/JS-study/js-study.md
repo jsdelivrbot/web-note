@@ -13,3 +13,5 @@
 - [深入理解JavaScript](http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html)
 
 - [js 核心](http://www.cnblogs.com/TomXu/archive/2012/01/12/2308594.html)
+
+- [js堆栈与拷贝](http://www.cnblogs.com/jingwhale/p/4884759.html)
