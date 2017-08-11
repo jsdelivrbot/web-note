@@ -70,6 +70,11 @@ HTML5 CSS3 相关的知识可以翻阅
 
 - [文档与源码编写风格](https://github.com/fex-team/styleguide)
 
+## 配色
+
+- [每日一粒](https://www.seeseed.com/daily/146)
+- [Pick Your Colors](http://www.vanschneider.com/colors/)
+
 ## 借鉴
 
 > One day reference
