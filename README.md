@@ -87,6 +87,8 @@ HTML5 CSS3 相关的知识可以翻阅
 
 - [Que's Blog](http://que01.top/)
 
+- [Kasmine Blog](https://me-momo.github.io/kasmine.blog/)
+
 **个人框架**
 
 - [octJS](https://github.com/younglaker/octjs)
