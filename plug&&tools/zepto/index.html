@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>zepto demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script type="text/javascript" src='./zepto-1.2.0.js'></script>
+</head>
+<body>
+  <h3>zeptoJS练习</h3>
+</body>
+<script type="text/javascript">
+  var scale = 1 / window.devicePixelRatio;
+  document.querySelector('meta[name="viewport"]').setAttribute('content','width=device-width,initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+  document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+</script>
+</html>
