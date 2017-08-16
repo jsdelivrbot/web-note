@@ -4,15 +4,32 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
 	<style>
-	body{
-		margin: 0;
-		padding: 0;
-	}
-	.box{
-		width: 2rem;
-		height: 2rem;
-		background: red;
-	}
+		body{
+			margin: 0;
+			padding: 16px;
+		}
+		.box{
+			width: 2rem;
+			height: 2rem;
+			background: red;
+		}
+    @media screen and (max-width: 321px) {
+        body {
+            font-size:16px
+        }
+    }
+
+    @media screen and (min-width: 321px) and (max-width:400px) {
+        body {
+            font-size:17px
+        }
+    }
+
+    @media screen and (min-width: 400px) {
+        body {
+            font-size:19px
+        }
+    }
 	</style>
 </head>
 <body>
@@ -20,7 +37,7 @@
 	<div class="box"></div>
 
 	<script>
-	//看设计图 保证font-size 100px
+	//看设计图 设置font-size
 	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
 	</script>
 </body>

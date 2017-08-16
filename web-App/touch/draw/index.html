@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>touch draw</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<style type="text/css">
+		body {
+			color: #333;
+		}
+		.chart-box{
+			width: 60%;
+			margin: 0 auto;
+		}
+		#canvas {
+			border: 1px solid #ececec;
+		}
+	</style>
+	<style type="text/css">
+		@media screen and (max-width: 321px) {
+        body {
+            font-size:16px
+        }
+    }
+
+    @media screen and (min-width: 321px) and (max-width:400px) {
+        body {
+            font-size:17px
+        }
+    }
+
+    @media screen and (min-width: 400px) {
+        body {
+            font-size:19px
+        }
+    }
+	</style>
+	<script type="text/javascript" src='./draw.js'></script>
+</head>
+<body>
+	<div class="chart-box" id='chart'></div>
+	<div class="root">
+		<h3>触摸touch 画图</h3>
+		Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
+	</div>
+</body>
+<script type="text/javascript">
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+	window.onload = function() {
+		var draw = new touchDraw('chart', 'log');
+		draw.init();
+	}
+</script>
+</html>
