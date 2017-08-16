@@ -26,7 +26,7 @@
 	    overflow-y: auto;
 		}
 		script::before {
-		  content: 'Source:';
+		  content: 'Code:';
 		  color: #0f0;
 		}
 	</style>
@@ -47,8 +47,8 @@
 
 		/*
 			复制
-			- 基本类型： 创建新值副本，互不影响
-			- 引用类型： 创建指针地址副本，指向同一对象
+			- 基本类型： 创建新值副本，互不影响；内存中固定大小空间，栈内存中
+			- 引用类型： 创建指针地址副本，指向同一对象；堆内存中
 		*/ 
 		var num1 = 5;
 		var num2 = num1;
@@ -128,6 +128,65 @@
 		console.log(a instanceof Array);
 		console.log(r instanceof RegExp);
 		console.log(f instanceof Function);
+	</script>
+	<script type="text/javascript">
+		/*
+		* 执行环境及作用域
+		* @keyword: 执行环境（自身环境，全局执行环境）
+		* @keyword: 变量对象 （函数的arguments对象， 全局变量对象）
+		* @keyword: 作用域链 （由内及外的查找）
+		* @keyword: 活动对象 （函数的变量对象）
+		*
+		*/
+
+		if(true) {
+			var test = 0;
+		}
+
+		console.log(test);
+
+		var color = 'red';
+
+		function changeColor(color) {
+			var initColor = color || 'blue';
+			console.log(color)
+			return (function() {
+				color = initColor;
+				console.log(color)
+			})()
+		}
+		
+
+		console.log(color);
+		changeColor(color);
+		console.log(color);
+
+		changeColor();
+		console.log(color);
+
+
+		color = null;
+		changeColor(color);
+		console.log(color);
+
+		/*
+		* 作用域链加长
+		* try-catch语句中的catch块
+		* with语句
+		*/
+		
+		function buildUrl() {
+			var qs = '?debug=true';
+
+			with(location) {
+				var url = href + qs;
+			}
+			return url
+		}
+
+		var url = buildUrl();
+		console.log(url);
+
 	</script>
 </body>
 </html>

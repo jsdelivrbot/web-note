@@ -51,6 +51,8 @@ HTML5 CSS3 相关的知识可以翻阅
 阿里数据可视化
 - [jsFiddle](https://jsfiddle.net/)
 在线编辑web测试开发
+- [掘金](https://juejin.im/timeline)
+跟进新技术，作为茶余饭后的点心
 
 ## UI库、框架
 
@@ -83,11 +85,11 @@ HTML5 CSS3 相关的知识可以翻阅
 
 - [ My Coding Life](http://bin-playground.top/#/)
 
-- [西风 blog](https://xifengxx.github.io/2016/06/26/%E7%A7%BB%E5%8A%A8Web%E5%BC%80%E5%8F%91/)
+- [西风 blog](https://xifengxx.github.io/)
 
 - [Que's Blog](http://que01.top/)
 
-- [Kasmine Blog](https://me-momo.github.io/kasmine.blog/)
+- [前端博客](https://yezihaohao.github.io/)
 
 **个人框架**
 
