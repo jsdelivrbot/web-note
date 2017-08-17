@@ -12,6 +12,7 @@
 > 学习参考链接：[MDN](https://developer.mozilla.org/en-US/docs/Web)
 
 - [程序员的自我修养](https://leohxj.gitbooks.io/a-programmer-prepares/content/)
+- [前端浅析](https://segmentfault.com/a/1190000005875954)
 
 **个人web笔记，主要记录一些学习中随记、随想，并不会详细记录各个知识点。**
 
