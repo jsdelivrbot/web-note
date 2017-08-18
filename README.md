@@ -96,6 +96,9 @@ HTML5 CSS3 相关的知识可以翻阅
 
 - [octJS](https://github.com/younglaker/octjs)
 
+**前端黑科技**
+- [canvas截屏](https://html2canvas.hertzen.com/)
+
 >古人云：学而不思则罔，思而不学则殆。在我看来编程与写作其实并不冲突，编程是一个学习与探究的过程，而写作则是一个分享与记录的过程，只有举一反三，方能为师矣。
 
 
