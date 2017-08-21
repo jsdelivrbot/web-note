@@ -8,7 +8,10 @@
 >
 >[你若触发，我就处理——浅谈JavaScript的事件响应](http://blog.jobbole.com/51889/)
 
->[MDN](https://developer.mozilla.org/en-US/docs/Web/API/Event#Properties)
+>[MDN](https://developer.mozilla.org/en-US/docs/Web/API/Event#Properties) 
+
+[events keycode](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode)
+[keycode](http://keycode.info/)
 
 **事件有哪些**
 
