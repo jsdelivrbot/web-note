@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>array 学习</title>
+	<style type="text/css">
+		body {
+	    width: 896px;
+	    min-height: calc(100vh - 48px);
+	    margin: 0 auto;
+	    padding: 24px 16px;
+	    background: #fefefe;
+	    color: rgb(60,60,60);
+	    -webkit-text-size-adjust: 100%;
+	  }
+		script {
+			display: block;
+	    white-space: pre;
+	    text-shadow: none;
+	    background: #333;
+	    border-radius: 6px;
+	    color: #fff;
+	    font-family: monaco, courier, monospace;
+	    padding: 10px;
+	    margin-top: 16px;
+	    max-height: 60vh;
+	    overflow-y: auto;
+		}
+		script::before {
+		  content: 'Code:';
+		  color: #0f0;
+		}
+	</style>
+</head>
+<body>
+	<h3>Array 类型</h3>
+
+	<script type="text/javascript">
+		/*
+			Array 基础篇
+		*/
+
+		/**
+			创建数组
+			1、Array
+			2、字面量 []
+		*/
+		var arr = new Array();
+		var arr0 = new Array(3);
+		var arr1 = new Array('a','b');
+
+		console.log(arr);
+		console.log(arr0);
+		console.log(arr1);
+
+		arr = [];
+		arr1 = ['a', 'b'];
+
+		//索引index获值
+		console.log(arr[0]);
+		console.log(arr1[0]);
+
+		//加长
+		arr1[3] = 'd';
+		console.log(arr1); //["a", "b", undefined × 1, "d"]
+		console.log(arr1.length); //4 
+
+		// length 特性 , 移除/添加数组项
+		arr1.length = 3;
+		arr.length = 1;
+
+		console.log(arr);
+		console.log(arr1);
+
+		arr1[arr1.length - 1] = 'c';
+		console.log(arr1); 
+
+		//检测数组
+
+		console.log(arr1 instanceof Array);
+		console.log(Array.isArray(arr1));
+
+	</script>
+</body>
+</html>
