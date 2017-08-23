@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>布局-flex</title>
+	<style type="text/css">
+		
+			/******************************************************
+				RESET
+			*******************************************************/	
+			* { margin:0; padding:0; }
+			*, *:before, *:after { box-sizing:border-box; }
+
+			/******************************************************
+				PAGE LAYOUT
+			*******************************************************/
+			
+			body { font:14px/1.5em Arial, sans-serif; color:#333; background:gainsboro; }
+			
+			.page { max-width:1280px; margin:0 auto; padding:0 20px; }
+			.header, #footer { background:ghostwhite; }
+			.header, #content { padding:20px; }
+			.content { background:white; }
+			.footer { padding:40px 20px; }
+			
+			h1, h2 { line-height:1.2em; }
+			ul { margin:10px 15px; }
+			p { margin:10px 0; }
+
+			/******************************************************
+				BOTTOM FOOTER
+			*******************************************************/
+
+			.ie-stickyFooter { 
+				display:flex; 
+			}
+			
+			.page {
+				width:100%;
+				min-height:100vh;
+				display:-webkit-flex;
+				display:flex;
+				-webkit-flex-direction:column;
+				flex-direction:column;
+			}
+			
+			.content { 
+				-webkit-flex-grow:1;
+				flex-grow:1;
+			}
+
+		
+	</style>
+</head>
+<body>
+	<div class="ie-stickyFooter">
+		<div class="page">
+			<div class="header">header</div>
+			<div class="content">content</div>
+			<div class="footer">footer</div>
+		</div>
+	</div>
+</body>
+</html>
