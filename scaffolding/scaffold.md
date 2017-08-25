@@ -6,6 +6,8 @@
 - [*yeoman 自动化搭建前端脚手架](http://luckykun.com/work/2016-09-01/yeoman-reactpackage.html)
 - [脚手架介绍](http://www.cnblogs.com/ihardcoder/p/6648423.html)
 
+- [脚手架示例 react](https://github.com/bodyno/react-starter-kit)
+
 ## 环境
 
 安装node npm
