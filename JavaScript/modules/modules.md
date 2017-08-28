@@ -4,6 +4,7 @@
 - [JS模块加载发展](https://segmentfault.com/a/1190000009446236)
 - [ES6模块](http://es6.ruanyifeng.com/#docs/module)
 - [AMD,CMD,CommonJS及UMD](http://blog.gejiawen.com/2015/11/03/what-is-amd-cmd-commonjs-umd/)
+- [modules](http://javascript.ruanyifeng.com/nodejs/module.html)
 
 ## 1.模块的写法
 模块化编程一般都有这么几个过渡过程，如下描述。
@@ -142,7 +143,7 @@ AMD也采用require()语句加载模块，但是不同于CommonJS，它要求两
 
 与math模块加载不是同步的，浏览器不会发生假死。所以很显然，AMD比较适合浏览器环境。
 
-## 3.require.js的加载
+## 3.require.js的异步加载
 	<script src="js/require.js"></script>
 有人可能会想到，加载这个文件，也可能造成网页失去响应。解决办法有两个，一个是把它放在网页底部加载，另一个是写成下面这样：
 
@@ -281,3 +282,40 @@ define([
 
 ## ES6 Module 的语法
 
+> export  import 
+
+[ES6 Module](http://es6.ruanyifeng.com/#docs/module)
+
+
+## UMD
+
+UMD的实现很简单：
+
+- 先判断是否支持Node.js模块格式（exports是否存在），存在则使用Node.js模块格式。
+- 再判断是否支持AMD（define是否存在），存在则使用AMD方式加载模块。
+- 前两个都不存在，则将模块公开到全局（window或global）。
+- 各种具体的实现方式，可以查看UMD的github。我这里举例一个jQuery使用的，按照如上方式实现的代码:
+
+```js
+// if the module has no dependencies, the above pattern can be simplified to
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define([], factory);
+    } else if (typeof exports === 'object') {
+        // Node. Does not work with strict CommonJS, but
+        // only CommonJS-like environments that support module.exports,
+        // like Node.
+        module.exports = factory();
+    } else {
+        // Browser globals (root is window)
+        root.returnExports = factory();
+  }
+}(this, function () {
+
+    // Just return a value to define the module export.
+    // This example returns an object, but the module
+    // can return a function as the exported value.
+    return {};
+}));
+```
