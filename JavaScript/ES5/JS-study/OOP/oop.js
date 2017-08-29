@@ -186,3 +186,20 @@ var objB = new ClassB("red", "John");
 objA.sayColor();	//输出 "blue"
 objB.sayColor();	//输出 "red"
 objB.sayName();	//输出 "John"
+
+//YUI式继承
+
+function Animal() {}
+Animal.prototype.feeling = 'happy';
+ 
+function extend(Child, Parent) {
+    var F = function(){};
+    F.prototype = Parent.prototype;
+    Child.prototype = new F();
+    Child.prototype.constructor = Child;
+}
+ 
+extend(Dog, Animal);
+ 
+var dog = new Dog('二狗', '哈士奇');
+print(dog.feeling); // happy
