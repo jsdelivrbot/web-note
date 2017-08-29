@@ -17,7 +17,8 @@
 
 **个人web笔记，主要记录一些学习中随记、随想，并不会详细记录各个知识点。**
 
-- 浏览器渲染机制：[浏览器的工作原理：新式网络浏览器幕后揭秘](https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/#1_1)
+## 优秀网站及好文
+
 - js禅意花园：[javascript](https://bonsaiden.github.io/JavaScript-Garden/zh/#intro)
 - 深入理解JavaScript系列：[汤姆大叔的博客](http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html)
 - Base64编码与解码：[详解Base64编码和解码](https://my.oschina.net/goal/blog/201032)
@@ -55,6 +56,13 @@ HTML5 CSS3 相关的知识可以翻阅
 在线编辑web测试开发
 - [掘金](https://juejin.im/timeline)
 跟进新技术，作为茶余饭后的点心
+
+
+## 浏览器
+
+- 浏览器渲染机制：[浏览器的工作原理：新式网络浏览器幕后揭秘](https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/#1_1)
+
+- [浏览器兼容](https://juejin.im/post/59a3f2fe6fb9a0249471cbb4)
 
 ## UI库、框架
 
@@ -104,6 +112,9 @@ HTML5 CSS3 相关的知识可以翻阅
 **前端黑科技**
 - [js编程黑科技](https://github.com/jawil/blog/issues/24)
 - [canvas截屏 html2canvas](https://html2canvas.hertzen.com/)
+
+
+**写在最后**
 
 >古人云：学而不思则罔，思而不学则殆。在我看来编程与写作其实并不冲突，编程是一个学习与探究的过程，而写作则是一个分享与记录的过程，只有举一反三，方能为师矣。
 

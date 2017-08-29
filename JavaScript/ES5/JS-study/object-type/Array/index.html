@@ -22,8 +22,9 @@
 	    font-family: monaco, courier, monospace;
 	    padding: 10px;
 	    margin-top: 16px;
+	    /*
 	    max-height: 60vh;
-	    overflow-y: auto;
+	    overflow-y: auto;*/
 		}
 		script::before {
 		  content: 'Code:';
@@ -217,6 +218,101 @@
 			console.log(insert)
 			console.log(add)
 
+		})();
+
+		/*
+			位置查找, 返回位置 未找到 -1；查找项 全等 ===
+			indexOf(index, item), 从前往后 ——>找，起始位置index， 查找项 item
+			lastIndexOf(index, item), 从后往前 <—— 找，起始位置index， 查找项 item
+
+			找到即返回
+		*/
+
+		(function(){
+			var arr = [1, 2, 3, 4, 5, 4, 6];
+
+			console.log(arr.indexOf(4));
+			console.log(arr.lastIndexOf(4));
+			
+		})();
+
+	</script>
+	<script type="text/javascript">
+		/*
+			数组迭代
+			every(): array 每一项执行函数，都返回true 则返回true
+			filter(): 过滤每一项，获取返回true的项组成的数组
+			forEach(): 获取每一项，运行函数，无返回, 不改变原数组
+			map(): 每一项运行函数，返回每一项运行后的组合数组
+			some(): 与every()相反，有返回true项，则返回true 
+		*/
+
+		// every((item, [i, array]) => {}) ; some()
+		
+		(() => {
+			var arr = [1, 2, 3, 4, 5, 6];
+
+			var bol = arr.every((item, i) => {
+				return item > 2;
+			});
+
+			var bol1 = arr.some((item, i) => {
+				return item > 2;
+			});
+
+			console.log(bol); // false
+			console.log(bol1); // true
+
+		})();
+
+		// filter((item, [i, array]) => {})
+
+		(() => {
+			var arr = [1, 2, 3, 4, 5, 6];
+
+			var result = arr.filter((item, i) => {
+				return item > 3
+			});
+
+			console.log(result);
+
+		})();
+
+		// map(), forEach
+
+		(() => {
+			var arr = [1, 2, 3, 4, 5, 6];
+
+			var result = arr.map((item, i) => {
+				return item * 2 + 2;
+			})
+
+			arr.forEach((item, i) => {
+				item = item * 2;
+			});
+
+			console.log(result);
+			console.log(arr);
+
+		})();
+
+	</script>
+
+	<script type="text/javascript">
+		/*
+			归并
+			reduce((prev, cur, index, array))
+			reduceRight()方向相反与 reduce() 
+		*/
+
+		(() => {
+			var arr = [1, 2, 3, 4, 5, 6];
+
+			var result = arr.reduce((prev, cur, index) => {
+				return prev + cur
+			})
+
+			console.log(result);
 		})();
 
 	</script>
