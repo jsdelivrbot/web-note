@@ -4,6 +4,8 @@
 
 - [emoji 图标](https://github.com/scotch-io/All-Github-Emoji-Icons)
 
+- [git操作](http://www.bootcss.com/p/git-guide/)
+
 ### git操作
 
 
