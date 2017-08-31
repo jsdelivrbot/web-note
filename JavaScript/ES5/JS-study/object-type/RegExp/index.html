@@ -99,9 +99,24 @@
 
 			console.log(reg.test(str))
 
+			//继承实例方法
+
 			console.log(reg1.toString()) // '/.nd/g'
 			console.log(reg1.toLocaleString()) // '/.nd/g'
 			console.log(reg.valueOf()) //  /.nd/(正则)
+
+		})();
+
+		(() => {
+			// RegExp 构造函数属性
+
+			var str = 'this has been a short summer';
+			var reg = /(..)or(.)/g;
+
+			if(reg.test(str)) {
+				console.log(RegExp.$1) // sh
+				console.log(RegExp.$2) // t
+			}
 
 		})();
 
