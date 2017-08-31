@@ -84,6 +84,8 @@ HTML5 CSS3 相关的知识可以翻阅
 
 - [RESTful](https://developer.github.com/)
 
+- [文档注释规范 YUIDoc规范](http://www.cnblogs.com/chris-oil/p/5387129.html)
+
 ## 配色
 
 - [每日一粒](https://www.seeseed.com/daily/146)
