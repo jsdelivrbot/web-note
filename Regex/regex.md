@@ -37,3 +37,7 @@ functiondelHtmlTag(str)
 }
 6. 统计字数
 t = $('.remarktext').html().replace(/<[^>]+>/g,"").length;
+
+## 黑科技趣闻
+
+- [一行能装逼的JavaScript代码](http://www.jfh.com/jfperiodical/article/3224)

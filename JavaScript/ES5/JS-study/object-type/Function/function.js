@@ -84,6 +84,7 @@
 
 //解耦函数名： arguments.callee ; user static 模式下不支持arguments
 
+
 function factorial (num) { // 阶乘
 	if(num <= 1) {
 		return 1;
@@ -92,6 +93,7 @@ function factorial (num) { // 阶乘
 		return num * arguments.callee(num - 1);
 	}
 }
+
 
 
 function outer() {
@@ -146,5 +148,16 @@ outer();
 
 	var changeScope = getColor.bind(o);
 	changeScope(); // blue
+
+
+	//arguments对象不是一个 Array 。它类似于数组，但除了 长度之外没有任何数组属性。例如，它没有 pop 方法。
+	//但是它可以被转换为一个真正的数组
+	//var arr = Array.prototype.slice.call(arguments); // 转数组
+
+	function foo() {
+		Array.prototype.forEach.call(arguments,(item) => {console.log(item)})
+	}
+
+	foo(1,2) // 1, 2
 
 })();
