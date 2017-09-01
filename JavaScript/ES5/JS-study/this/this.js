@@ -2,6 +2,25 @@
  this
  * */
 
+var color = 'red';
+var o = {color: 'blue'};
+
+function getColor() {
+	console.log(this.color);
+}
+
+getColor(); // red
+
+o.getColor = getColor;
+o.getColor() // blue
+
+// apply 、 call
+
+getColor.call(this); // red
+getColor.call(o); // blue
+
+
+
 str = 'asda';
 
 function foo() {
@@ -25,10 +44,12 @@ Thing.prototype.deleteFoo = function () {
 
 var thing = new Thing();
 thing.setFoo("foo");
-thing.logFoo(); //logs "foo";
+thing.logFoo(); // "foo";
 thing.deleteFoo();
-thing.logFoo(); //logs "bar";
+thing.logFoo(); // "bar";
 thing.foo = "foobar";
-thing.logFoo(); //logs "foobar";
+thing.logFoo(); // "foobar";
 delete thing.foo;
-thing.logFoo(); //logs "bar";
+thing.logFoo(); // "bar";
+
+

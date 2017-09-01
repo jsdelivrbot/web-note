@@ -86,6 +86,12 @@ const drawLineArrow = (x1,y1,x2,y2) =>{
 }  
 
 //深拷贝
+/**
+ * JSON 克隆不支持函数、引用、undefined 等
+ * 递归克隆要考虑环
+ * 要考虑 Date、RegExp、Function 等特殊对象的克隆方式
+ * 要不要克隆 __proto__，如果要克隆，就非常浪费内存；如果不克隆，就不是深克隆。
+ */
 const deepCopy = (o) => {
   if (o instanceof Array) {
       var n = [];

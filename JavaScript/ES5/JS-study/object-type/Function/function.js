@@ -52,4 +52,99 @@
 		return a + b;
 	}
 
+})(); 
+
+//函数嵌套
+(() => {
+	// sort 示例
+	
+	function objComparisonFunction(propertyName) {
+		return function(obj1, obj2) {
+			var val1 = obj1[propertyName];
+			var val2 = obj2[propertyName];
+
+			if(val1 < val2) {
+				return -1
+			}
+			else if(val1 > val2) {
+				return 1;
+			}
+			else {
+				return 0;
+			}
+		}
+	}
+
+	var data = [{name: 'tom', age: 28}, {name: 'jack', age: 29}]
+
+	data.sort(objComparisonFunction('name'));
+
+	console.log(data);
+})();
+
+//解耦函数名： arguments.callee ; user static 模式下不支持arguments
+
+function factorial (num) { // 阶乘
+	if(num <= 1) {
+		return 1;
+	}
+	else {
+		return num * arguments.callee(num - 1);
+	}
+}
+
+
+function outer() {
+	inner();
+}
+
+function inner() {
+	alert(arguments.callee.caller); // 返回调用函数 function outer() {}
+}
+
+outer();
+
+/**
+ * 函数function 对象的属性 方法
+ *
+ * 属性：length(参数)、prototype
+ * 方法：apply(this, Array)、call(this, param, ...) 、 bind(this)
+ *
+ */
+
+(function() {
+	function foo(a, b){
+		
+	}
+
+	console.log(foo.length) // 2
+	console.log(foo.prototype) // 不可枚举的， toString()、valueOf()
+
+	function sum(num1, num2) {
+		return num1 + num2;
+	}
+
+	function callSum1(num1, num2) {
+		return sum.apply(this, arguments); 
+		// 如果 直接使用 apply(this, arguments) // this => undefined
+	}
+
+	function callSum2(num1, num2) {
+		return sum.call(this, num1, num2);
+	}
+
+	callSum1(2, 3); // 5
+
+	// bind
+	
+	var color = 'red';
+	var o = {color: 'blue'};
+
+	function getColor() {
+		console.log(this.color);
+	}
+
+	var changeScope = getColor.bind(o);
+	changeScope(); // blue
+
 })();

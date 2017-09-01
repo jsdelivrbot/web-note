@@ -13,7 +13,7 @@ var foo = new Function('a', 'b', 'return a + b')
 var foo = function(a, b) {return a + b}
 ```
 
-**常用tag**
+**常用注释tag**
 @author、@callback、@copyright、@default、@deprecated、@throws 、@todo
 @param、@returns
 
