@@ -356,130 +356,142 @@ var Ydata = [	'食品类',
 						]
 
  // 基于准备好的dom，初始化echarts实例
-var myChart = echarts.init(document.getElementById('chart'));
 
-// 指定图表的配置项和数据
-var option = {
-    tooltip: {
-    	formatter: params => {
-    		// console.log(params)
-    		return '<div>'+ params.seriesName +'<br/>'+
-								'x: ' + Xdata[params.data[0]] + '<br/>' +
-								'y: ' + Ydata[params.data[1]] + '<br/>' +
-								'z: ' + params.data[2] + '<br/>' +
-    		'</div>'
-    	}
-    },
-    backgroundColor: '#fff',
-    legend: {
-        data:['京-津','京-冀','津-冀']
-    },
-    xAxis3D: {
-        type: 'category',
-        axisLabel: {
-					interval: 0
-        },
-        data:Xdata
-    },
-    zAxis3D: {
-        type: 'value'
-    },
-    yAxis3D: {
-        type: 'category',
-        axisLabel: {
-					interval: 0
-        },
-        data:Ydata
-    },
-    grid3D: {
-        viewControl: {
-            // projection: 'orthographic'
-        },
-        boxHeight: 100
-    },
-    series: [{
-        type: 'surface',
-        name: '京-津',
-        wireframe: {
-            show: false
-        },
-        shading: 'color',
-        itemStyle: {
-					color: '#98de91'
-        },
-        equation: {
-            x: {
-                step: 1,
-                min:0,
-                max: 9
-            },
-            y: {
-                step: 1,
-                min:0,
-                max: 8
-            },
-            z: function (x, y) {
-              var value = data['bt'][x][y]
-              
-              return value
-            }
-        }
-    },{
-        type: 'surface',
-        name: '京-冀',
-        wireframe: {
-            show: false
-        },
-        shading: 'color',
-        itemStyle: {
-					color: '#30abdc'
-        },
-        equation: {
-            x: {
-                step: 1,
-                min:0,
-                max: 9
-            },
-            y: {
-                step: 1,
-                min:0,
-                max: 8
-            },
-            z: function (x, y) {
-              var value = data['bj'][x][y]
-         
-              return value
-            }
-        }
-    },{
-        type: 'surface',
-        name: '津-冀',
-        wireframe: {
-            show: false
-        },
-        shading: 'color',
-        itemStyle: {
-					color: '#b976c9'
-        },
-        equation: {
-            x: {
-                step: 1,
-                min:0,
-                max: 9
-            },
-            y: {
-                step: 1,
-                min:0,
-                max: 8
-            },
-            z: function (x, y) {
-              var value = data['tj'][x][y]
-             
-              return value
-            }
-        }
-    }]
+var chart = {
+	init: function(min, max) {
+		this.drawChart(min - 0, max - 0)
+	},
+
+	drawChart: function (min, max) {
+		var myChart = echarts.init(document.getElementById('chart'));
+
+		// 指定图表的配置项和数据
+		var option = {
+		    tooltip: {
+		    	formatter: params => {
+		    		// console.log(params)
+		    		return '<div>'+ params.seriesName +'<br/>'+
+										'x: ' + Xdata[params.data[0]] + '<br/>' +
+										'y: ' + Ydata[params.data[1]] + '<br/>' +
+										'z: ' + params.data[2] + '<br/>' +
+		    		'</div>'
+		    	}
+		    },
+		    backgroundColor: '#fff',
+		    legend: {
+		        data:['京-津','京-冀','津-冀']
+		    },
+		    xAxis3D: {
+		        type: 'category',
+		        axisLabel: {
+							interval: 0
+		        },
+		        data:Xdata
+		    },
+		    zAxis3D: {
+		        type: 'value'
+		    },
+		    yAxis3D: {
+		        type: 'category',
+		        axisLabel: {
+							interval: 0
+		        },
+		        data:Ydata
+		    },
+		    grid3D: {
+		        viewControl: {
+		            // projection: 'orthographic'
+		        },
+		        boxHeight: 100
+		    },
+		    series: [{
+		        type: 'surface',
+		        name: '京-津',
+		        wireframe: {
+		            show: false
+		        },
+		        shading: 'color',
+		        itemStyle: {
+							color: '#98de91',
+							opacity: 0.7
+		        },
+		        equation: {
+		            x: {
+		                step: 1,
+		                min:min,
+		                max: max
+		            },
+		            y: {
+		                step: 1,
+		                min:0,
+		                max: 8
+		            },
+		            z: function (x, y) {
+		              var value = data['bt'][x][y]
+		              
+		              return value
+		            }
+		        }
+		    },{
+		        type: 'surface',
+		        name: '京-冀',
+		        wireframe: {
+		            show: false
+		        },
+		        shading: 'color',
+		        itemStyle: {
+							color: '#30abdc',
+							opacity: 0.7
+		        },
+		        equation: {
+		            x: {
+		                step: 1,
+		                min:min,
+		                max: max
+		            },
+		            y: {
+		                step: 1,
+		                min:0,
+		                max: 8
+		            },
+		            z: function (x, y) {
+		              var value = data['bj'][x][y]
+		         
+		              return value
+		            }
+		        }
+		    },{
+		        type: 'surface',
+		        name: '津-冀',
+		        wireframe: {
+		            show: false
+		        },
+		        shading: 'color',
+		        itemStyle: {
+							color: '#b976c9',
+							opacity: 0.7
+		        },
+		        equation: {
+		            x: {
+		                step: 1,
+		                min:min,
+		                max: max
+		            },
+		            y: {
+		                step: 1,
+		                min:0,
+		                max: 8
+		            },
+		            z: function (x, y) {
+		              var value = data['tj'][x][y]
+		             
+		              return value
+		            }
+		        }
+		    }]
+		}
+
+		// 使用刚指定的配置项和数据显示图表。
+		myChart.setOption(option);
+	}
 }
-
-// 使用刚指定的配置项和数据显示图表。
-myChart.setOption(option);
