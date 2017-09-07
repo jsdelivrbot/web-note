@@ -6,7 +6,9 @@
 
 ## angularJS 1.x
 
-> [https://checkcheckzz.gitbooks.io/angularjs-learning-notes/content/index.html](https://checkcheckzz.gitbooks.io/angularjs-learning-notes/content/index.html)
+- [AngularJS gitBook](https://checkcheckzz.gitbooks.io/angularjs-learning-notes/content/index.html)
+
+- [AngularJS 中文网](http://www.angularjs.net.cn/)
 
 **详情参照上面地址内容...**
 
