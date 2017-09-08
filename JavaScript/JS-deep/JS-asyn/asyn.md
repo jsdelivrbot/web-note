@@ -8,7 +8,9 @@
 ### 参考
 
 - [Javascript异步编程](http://www.jianshu.com/p/6d4d2e21d041)
+- [Js异步编程方式](https://lenshen.com/2016/12/22/js-async-coding/)
 - [es6 promise](http://es6.ruanyifeng.com/#docs/promise)
+- [js异步编程魔法](http://fsux.me/js/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/2016/03/24/Asynchronous-programming-magic.html)
 
 ### 了解
 
@@ -88,4 +90,21 @@ operation1().then(function (result1) {
 }).then(function (result5) {
     //And so on
 });
+```
+
+### async - 脚本的并行化
+
+```
+<html>
+    <head>
+        <script src="a.js"></script>
+        <script defer src="b.js"></script>
+    </head>
+    <body>
+        <!-- content -->
+        <script async defer src="c.js"></script>
+        <script async defer src="d.js"></script>
+    </body>
+</html>
+
 ```

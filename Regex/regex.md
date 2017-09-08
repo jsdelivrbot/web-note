@@ -2,12 +2,13 @@
 
 > 程序员必备基础
 
-- [MDN Regex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions?redirectlocale=en-US&redirectslug=JavaScript%2FGuide%2FRegular_Expressions)
+- [MDN Regex](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
 
 - [正则表达式学习总结](https://segmentfault.com/a/1190000008766125)
+- [深入浅出的javascript的正则表达式](http://web.jobbole.com/84450/)
 
 
-## 随记 
+## 随记  
 
 ^(?![A-Z]+$)(?![a-z]+$)(?!\d+$)(?![\W_]+$)\S{8,20}$   //8-20位字母、数字、非空字符组合，缺陷中文
 

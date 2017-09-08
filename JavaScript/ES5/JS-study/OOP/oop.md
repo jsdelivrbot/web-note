@@ -1,4 +1,4 @@
-### Welcome to OOP
+## Welcome to OOP
 
 > JavaScript是不是一门严格意义上的面向对象的语言，它并没有提供类的方法。它是使用原型继承而不是类继承达到面向对象的效果。
 
@@ -9,7 +9,22 @@
 
 - [OOP](http://www.alloyteam.com/2015/06/javascript-shu-ju-jie-gou-he-suan-fa-jian-shu-qian-yan/)
 
-## 什么是面向对象
+### 对象
+
+> 无序属性的集合，其属性可以包含基本值、对象或者函数。
+
+```
+var obj = new Object();
+obj.name = 'NARUTOne';
+
+或
+var obj1 = {
+  name: 'NARUTOne'
+};
+obj1.age = 23;
+```
+
+### 什么是面向对象
 
 **面向对象语言的三大特性:**
 

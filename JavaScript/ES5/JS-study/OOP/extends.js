@@ -1,5 +1,5 @@
 /**
- * @title: javascript 面向对象编程 （OOP）
+ * @title: javascript 面向对象编程 （OOP）- 继承（extends）
  * 
  * @Date: 2017/07/27
  * @author: NARUTOne
