@@ -4,7 +4,7 @@
 
 - [常用的Javascript设计模式](http://blog.jobbole.com/29454/)
 - [js设计模式](http://www.cnblogs.com/Darren_code/archive/2011/08/31/JavascripDesignPatterns.html)
-
+- [极客学院 设计模式](http://wiki.jikexueyuan.com/project/javascript-design-patterns/)
 
 ## 前言：
 

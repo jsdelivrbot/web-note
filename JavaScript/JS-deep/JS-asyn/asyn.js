@@ -1,5 +1,6 @@
 /**
- * JS 异步编程
+ * JS 异步编程 示例
+ * 不能执行
  * @author NARUTOne
  * @date 2017/08/31
  */
@@ -38,7 +39,7 @@ while(new Date - start<1000){
 
 }
 
-// 3、类事件监听 采用 jquery
+// 3、类事件监听 采用 jquery on() trigger()
 
 function f1(){
 　setTimeout(function () {
@@ -48,9 +49,36 @@ function f1(){
 }
 
 f1.on('done', mycallback);
- 
 
-// promise , ES6
+// 4、发布订阅 jquery.subscribe  
+
+function f2() {
+  console.log('hello world!')
+}
+
+jQuery.subscribe("done", f2);
+
+function f1(){
+　setTimeout(function () {
+　// f1的任务代码
+　　jQuery.publish("done");
+　}, 1000);
+}
+ 
+jQuery.unsubscribe("done", f2);
+
+
+// 5、高阶函数
+
+function fn(str1) {
+  return function(str2) {
+    return str1 + str2;
+  }
+}
+
+fn('hello')('world');
+
+// 6、promise , ES6
 
 function timeout(ms) {
   return new Promise((resolve, reject) => {
@@ -81,3 +109,35 @@ Promise.all( [p1,p2] )
 .then( function(msgs){
 	console.log( msgs );	// [42,"Hello World"]
 } );
+
+
+// 7、Generator ES6
+
+function* gen(x){
+  try {
+    var y = yield x + 2;
+  } catch (e){ 
+    console.log(e);
+  }
+  return y;
+}
+var g = gen(1);
+g.next(); // 3
+g.throw（'出错了'）;// 出错了
+
+// 8、async/await  ES7
+
+var sleep = function (time) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            resolve();
+        }, time);
+    })
+};
+var start = async function () {
+    // 在这里使用起来就像同步代码那样直观
+    console.log('start');
+    await sleep(3000);
+    console.log('end');
+};
+start()
