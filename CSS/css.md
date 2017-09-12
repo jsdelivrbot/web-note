@@ -2,11 +2,13 @@
 
 > 记录一些css 中的各种趣事、怪事、美事等 :smile:
 
-### 小记
+### css 小记
 
 [渐变](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Using_CSS_gradients)
 [css modules](https://github.com/camsong/blog/issues/5)
 [css font-family](http://moxfive.xyz/2015/12/09/css-font-family/)
+[css vivify](http://vivify.mkcreative.cz/)
+[BFC](https://juejin.im/post/59b73d5bf265da064618731d)
 
 ### css 问题集
 
