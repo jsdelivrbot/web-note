@@ -1,7 +1,7 @@
 ### Welcome to study webpack
 
 [webpack学习](http://www.imooc.com/article/7221)
-
+[webpack 中文网](https://doc.webpack-china.org)
 
 ### 小计
 
