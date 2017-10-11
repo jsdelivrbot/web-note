@@ -1,22 +1,22 @@
-// webpack config  of study test
+// webpack config
 
 const webpack = require('webpack');
-var path = require('path');
+const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin'); //能够删除未引用代码(dead code)的压缩工具(minifier)
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const BUILD_PATH = 'dist_test'
+const BUILD_PATH = 'dist'
 
-
-module.exports = {
-  entry:{
-    app: './test/index.js',
+const config = {
+   entry:{
+    app: './app/index.js',
+    // test: './app/test.js',
     // print: './test/print.js'
   },
   output: {
-    path: path.resolve(__dirname, 'dist_test'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
     publicPath: '/' + BUILD_PATH + '/'  // 由于项目index.html在publicPath中，查看 http://localhost:3000/dist_test/
   },
   module: {
@@ -45,8 +45,7 @@ module.exports = {
         loader: 'json-loader'
       },
     ]
-  },
-  devtool: 'inline-source-map', // 用于开发阶段的debug
+  },  
   resolve: {
     extensions: ['.js'],
     alias: {
@@ -55,17 +54,12 @@ module.exports = {
   },
   plugins: [ 
     new webpack.HotModuleReplacementPlugin(),
-    new CleanWebpackPlugin(['dist_test']), // 清除 测试dist
-    new UglifyJSPlugin(),
+    new CleanWebpackPlugin(['dist']), // 清除 测试dist
     new HtmlWebpackPlugin({
       title: 'Output Management',
       template: path.resolve(__dirname, 'template.html'),
     })
-  ],
-  devServer: {
-    contentBase: path.resolve(__dirname, "dist_test"),
-    compress: true,
-    hot: true,
-    port: 9000
-  }
-};
+  ]
+}
+
+module.exports = config;
