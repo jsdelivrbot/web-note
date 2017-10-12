@@ -8,7 +8,7 @@ const merge = require('webpack-merge'); // 为了将这些配置合并在一起�
 const config = require('./webpack.base.config.js');
 
 module.exports = merge(config, {
-	devtool: 'source-map',
+	devtool: 'source-map', // 生成.map文件
 	plugins: [
 		new UglifyJSPlugin({
 			sourceMap: true

@@ -7,3 +7,5 @@
 
 - [IE9 CSS bug ](https://github.com/ant-tool/atool-build/issues/182)
 - [webpack学习 入门到实践](https://segmentfault.com/a/1190000011042867)
+- [Webpack + react-router 按需加载](http://react-china.org/t/webpack-react-router/10123)
+- [Webpack中的sourcemap](https://segmentfault.com/a/1190000008315937)
