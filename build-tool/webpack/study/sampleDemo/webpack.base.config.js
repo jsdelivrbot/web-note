@@ -7,10 +7,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const BUILD_PATH = 'dist'
 
-function configFun(env) {
+// function configFun(env) {
 
-  console.log('NODE_ENV: ', env.NODE_ENV) // 'local'
-  console.log('Production: ', env.production) // true
+//   console.log('NODE_ENV: ', env.NODE_ENV) // 'local'
+//   console.log('Production: ', env.production) // true
   
   const config = {
     entry:{
@@ -54,7 +54,7 @@ function configFun(env) {
           loader: 'json-loader'
         },
         {
-          test: require.resolve('globals.js'), // 使用exports-loader，将该全局变量导出为常规模块导出
+          test: require.resolve('./app/globals.js'), // 使用exports-loader，将该全局变量导出为常规模块导出
           use: 'exports-loader?file,parse=helpers.parse'
         }
       ]
@@ -96,11 +96,9 @@ function configFun(env) {
   //   })
   // })
   
-  return config
-}
+//   return config
+// }
 
 
 
-module.exports = env => {
-  return configFun(env)
-} 
+module.exports = config
