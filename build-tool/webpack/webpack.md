@@ -10,3 +10,7 @@
 - [Webpack + react-router 按需加载](http://react-china.org/t/webpack-react-router/10123)
 - [Webpack中的sourcemap](https://segmentfault.com/a/1190000008315937)
 - [webpack3 配置参考](http://blog.csdn.net/qq_20334295/article/details/74166356)
+
+### react-router 
+
+- [browserHistory浏览器刷新](https://www.thinktxt.com/react/2017/02/26/react-router-browserHistory-refresh-404-solution.html)
