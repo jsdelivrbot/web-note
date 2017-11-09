@@ -81,6 +81,8 @@ HTML5 CSS3 相关的知识可以翻阅
 
 > 咱们自古就有无规矩不成方圆，代码、文档编写，项目的开发等都是需要规范的，有规范才能更好的一起拥抱未来。
 
+- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+
 - [文档与源码编写风格](https://github.com/fex-team/styleguide)
 
 - [RESTful](https://developer.github.com/)
@@ -93,6 +95,7 @@ HTML5 CSS3 相关的知识可以翻阅
 
 - [每日一粒](https://www.seeseed.com/daily/146)
 - [Pick Your Colors](http://www.vanschneider.com/colors/)
+- [在线渐变配色](http://gradient.awesomes.cn/)
 
 ## 在线CDN资源
 

@@ -16,3 +16,7 @@
 - 2000年-2005年：XMLHttpRequest，熟知为AJAX，在如Outlook Web Access(2002)、Oddpost(2002)、Gmail(2004)、Google Maps(2005)中得到了广泛的应用。
 - 2009年：ES5发布（这是我们目前用的最多的版本），带来了forEach / Object.keys / Object.create（特地为Douglas Crockford所造，JSON标准创建者） ，还有JSON标准。
 - 2015年6月： ES6 既是一个历史名词，也是一个泛指，含义是5.1版以后的 JavaScript 的下一代标准，涵盖了ES2015、ES2016、ES2017等等，而ES2015 则是正式名称，特指该年发布的正式版本的语言标准。
+
+## 小计
+
+- [async / await 替代Promise](https://github.com/xingbofeng/xingbofeng.github.io/issues/16)
