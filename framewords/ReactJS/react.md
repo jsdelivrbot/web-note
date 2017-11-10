@@ -9,6 +9,10 @@
 
 ![](https://raw.githubusercontent.com/NARUTOne/resources-github/master/imgs/react/react-life.png)
 
+### 组件通信
+
+![](https://raw.githubusercontent.com/NARUTOne/resources-github/master/imgs/react/react-connect.jpg)
+
 ## redux
 
 createStore方法的一个简单实现，可以了解一下 Store 是怎么生成的。

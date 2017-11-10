@@ -50,7 +50,7 @@ $ git push origin develop
 
 
 删除分支
-git  branch -a 
+git  branch -a  // 查看
 git checkout master
 
 (本地)
@@ -68,6 +68,34 @@ git rm name -r
 
 
 git reset --hard 版本 回退版本
+
+
+创建 稳定不可以改标签 tags
+
+创建
+
+git tag -a V1.2 -m 'WebSite version 1.2'
+
+查看
+
+git tag
+
+推送tag
+
+git push origin --tags
+
+删除
+
+git tag -d V1.2
+
+git push origin :refs/tags/V1.2
+
+获取版本代码
+
+git fetch origin tag V1.2
+
+
+
 
 
 

@@ -6,14 +6,13 @@
 
 - [git操作](http://www.bootcss.com/p/git-guide/)
 
-### git操作
-
+## git操作
 
 git remote rm origin  移除origin
 
 git reset –-hard [版本]:回退
 
-分支合并：
+###分支合并：
 $ git checkout master
 $ git merge --no-ff develop
 $ git pull origin master
@@ -21,7 +20,8 @@ $ git add *
 $ git commit -m "xxx"
 $ git push origin master
 
-创建项目上传项目：
+
+###创建项目上传项目：
 $ git config --global user.name "wuzhong"
 
 $ git config --global user.email "zhong.wu@baifendian.com"
@@ -43,7 +43,7 @@ $ git commit
 $ git push -u origin master 
 
 
-创建分支
+###创建分支
 
 $ git clone url 
 
@@ -59,29 +59,52 @@ $ git push origin develop
 
 
 删除分支
-
-git  branch -a 
-
+git  branch -a  // 查看
 git checkout master
 
 (本地)
 (需要切换到其他分支master)
-
 git branch -d  name
 
 (远程)
-
 git branch -r -d origin/name 
-
 git push origin :name
 
-删除文件
 
+### 删除文件
 git rm name -r 
-
-删除文件夹及其文件
-
-git rm name -r -f
+接着再commit + push一遍
 
 
-git reset --hard 版本 回退版本 
+git reset --hard 版本 回退版本
+
+
+### 创建 稳定不可以改标签 tags
+
+创建
+
+git tag -a V1.2 -m 'WebSite version 1.2'
+
+查看
+
+git tag
+
+推送tag
+
+git push origin --tags
+
+删除
+
+git tag -d V1.2
+
+git push origin :refs/tags/V1.2
+
+获取版本代码
+
+git fetch origin tag V1.2
+
+
+
+
+
+
