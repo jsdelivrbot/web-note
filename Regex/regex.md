@@ -6,6 +6,7 @@
 
 - [正则表达式学习总结](https://segmentfault.com/a/1190000008766125)
 - [深入浅出的javascript的正则表达式](http://web.jobbole.com/84450/)
+- [正则学习](http://mp.weixin.qq.com/s/dVci7XH-xyd9FOdmVoJBDQ)
 
 
 ## 随记  

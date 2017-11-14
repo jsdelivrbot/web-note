@@ -11,7 +11,7 @@
 
 ### 组件通信
 
-![](https://raw.githubusercontent.com/NARUTOne/resources-github/master/imgs/react/react-connect.jpg)
+![](https://raw.githubusercontent.com/NARUTOne/resources-github/master/imgs/react/react_connect.jpg)
 
 ## redux
 
