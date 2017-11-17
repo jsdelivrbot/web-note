@@ -17,6 +17,13 @@
 
 **个人web笔记，主要记录一些学习中随记、随想，并不会详细记录各个知识点。**
 
+## 历史都不知道，你还能学好前端:facepunch:
+
+[history](./history.md)
+
+**webAssembly 字节码技术**
+- [知乎讨论](https://www.zhihu.com/question/31415286)
+
 ## 优秀网站及好文
 
 - js禅意花园：[javascript](https://bonsaiden.github.io/JavaScript-Garden/zh/#intro)
@@ -70,9 +77,11 @@ HTML5 CSS3 相关的知识可以翻阅
 - [bfd-ui](http://ui.baifendian.com/)
 - [Ant-design](https://ant.design/index-cn)
 - [RSUITE](https://rsuitejs.com/getting-started)
+- [zanUI](https://www.youzanyun.com/zanui)
 
 ### vue
 - [iview](https://www.iviewui.com/)
+- [element](http://element-cn.eleme.io/#/zh-CN)
 
 ### babel
 -[babeljs.io](http://babeljs.io/)
