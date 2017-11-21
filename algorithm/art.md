@@ -11,6 +11,8 @@
 
 - [js 算法总结](https://github.com/LukeLin/js-stl)
 
+- [js面试算法](http://mp.weixin.qq.com/s/5h_t5JAuIfLypsuj3SkvjA)
+
 ### 数据结构概述
 
 
