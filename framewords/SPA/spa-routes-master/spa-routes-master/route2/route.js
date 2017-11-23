@@ -60,6 +60,7 @@
 					}
 				})
 			}else{
+				// 执行callbace函数
 				self.routers[currentHash.path].callback.call(self,currentHash)
 			}
 		},
