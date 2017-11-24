@@ -15,3 +15,5 @@
 - [js 核心](http://www.cnblogs.com/TomXu/archive/2012/01/12/2308594.html)
 
 - [js堆栈与拷贝](http://www.cnblogs.com/jingwhale/p/4884759.html)
+
+- [js Event Loop ](http://mp.weixin.qq.com/s/-OLmK23sfyeirxCxWQyAhA)
