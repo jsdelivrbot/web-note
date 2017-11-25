@@ -9,7 +9,7 @@
 <script src="https://unpkg.com/vue"></script>
 <body>
   <div id="app">
-    {{message}}
+    <span v-once>{{message}}</span>{{message}}
   </div>
   <div id="app-2">
     <span v-bind:title="message">
@@ -36,7 +36,7 @@
   </div>
   <!-- vue-modal: 双向绑定 -->
   <div id="app-6">
-    <p>{{ message }}</p>
+    <p>{{ message.split('').reverse().join('') }}</p>
     <input v-model="message">
   </div>
   <!-- vue 组件 组合 -->
@@ -54,6 +54,17 @@
       </todo-item>
     </ol>
   </div>
+  <!-- v-html HTML插值 -->
+  <div id="app-8">
+    <p :title='message'>v-bind 缩写</p>
+    <p>Using mustaches: {{ rawHtml }}</p>
+    <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+    <button v-bind:disabled="isDisabled">按钮bind</button>
+    <!-- .prevent 修饰符告诉 v-on 指令对于触发的事件调用 event.preventDefault()： -->
+    <a href="https://cn.vuejs.org/v2/guide/syntax.html" v-on:click.prevent='handleClick'>点击按钮</a>
+    <!-- v-on 简写 @ -->
+    <a href="https://cn.vuejs.org/v2/guide/syntax.html" @click.prevent='handleClick'>点击按钮</a>
+  </div>
 </body>
 <script>
 
@@ -65,7 +76,12 @@
    *    data: {} , //所有数据属性
    *    method: {} // 方法集
    * })
+   *
+   * {{}}: Mustache 语法
+   * 不能使用全局变量
    */
+  
+  var message = '全局变量'; 
 
   // start vue
   var app = new Vue({
@@ -150,6 +166,21 @@
         { id: 1, text: '奶酪' },
         { id: 2, text: '随便其他什么人吃的东西' }
       ]
+    }
+  })
+
+  var app8 = new Vue({
+    el: '#app-8',
+    data: {
+      message: '简写v-bind: ——》 :',
+      rawHtml: `<span style="color: red">span is red</span>`,
+      // isDisabled: true // 可以禁用
+      isDisabled: null
+    },
+    methods: {
+      handleClick: function() {
+        alert('message');
+      }
     }
   })
 </script>
