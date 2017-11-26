@@ -7,20 +7,26 @@
   <title>vue-demo</title>
 </head>
 <script src="https://unpkg.com/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
 <body>
+  <h3>vue 开始</h3>
   <div id="app">
     <span v-once>{{message}}</span>{{message}}
   </div>
+  <h3>v-bind</h3>
   <div id="app-2">
     <span v-bind:title="message">
       <!-- v-bind 数据绑定，动态显示-->
       鼠标悬停几秒钟查看此处动态绑定的提示信息！
     </span>
   </div>
+  <h3>v-if</h3>
   <div id="app-3">
     <!-- vue-if 条件判断，动态显示 -->
     <p v-if="seen">现在你看到我了</p>
   </div>
+  <h3>v-for</h3>
   <!-- vue-for : 循环显示元素 -->
   <div id="app-4">
     <ol>
@@ -29,17 +35,20 @@
       </li>
     </ol>
   </div>
+  <h3>v-on</h3>
   <!-- vue-on: 事件 -->
   <div id="app-5">
     <p>{{ message }}</p>
     <button v-on:click="reverseMessage">逆转消息</button>
   </div>
+  <h3>v-modal</h3>
   <!-- vue-modal: 双向绑定 -->
   <div id="app-6">
     <p>{{ message.split('').reverse().join('') }}</p>
     <input v-model="message">
   </div>
   <!-- vue 组件 组合 -->
+  <h3>vue 组件</h3>
   <div id="app-7">
     <ol>
       <!--
@@ -54,6 +63,7 @@
       </todo-item>
     </ol>
   </div>
+  <h3>v-html , vue综合</h3>
   <!-- v-html HTML插值 -->
   <div id="app-8">
     <p :title='message'>v-bind 缩写</p>
@@ -64,7 +74,27 @@
     <a href="https://cn.vuejs.org/v2/guide/syntax.html" v-on:click.prevent='handleClick'>点击按钮</a>
     <!-- v-on 简写 @ -->
     <a href="https://cn.vuejs.org/v2/guide/syntax.html" @click.prevent='handleClick'>点击按钮</a>
+    <p>
+      <span>{{text}}</span>
+      <span>{{reverseText}}</span>
+    </p>
+    <p>
+      <span>{{name}}</span><br/>
+      <span>{{cname}}</span><br/>
+      <span>changeCname: {{changeName}}</span><br/>
+      <input type="text" v-model='name'/>
+    </p>
+    <button v-on:click='handleChangeName'>click改变name</button>
   </div>
+  <h3>vue 侦听器</h3>
+  <div id="watch-example">
+    <p>
+      Ask a yes/no question:
+      <input v-model="question">
+    </p>
+    <p>{{ answer }}</p>
+  </div>
+
 </body>
 <script>
 
@@ -168,6 +198,8 @@
       ]
     }
   })
+  
+  // demo 合计
 
   var app8 = new Vue({
     el: '#app-8',
@@ -175,13 +207,85 @@
       message: '简写v-bind: ——》 :',
       rawHtml: `<span style="color: red">span is red</span>`,
       // isDisabled: true // 可以禁用
-      isDisabled: null
+      isDisabled: null,
+      text: 'hello vue ！',
+      name: 'naruto',
+      changeName: 'wz'
     },
     methods: {
       handleClick: function() {
         alert('message');
+      },
+      handleChangeName: function() {
+        this.cname = 'wuzhong'
+      }
+    },
+    // 计算属性computed, getter() 默认;
+    // 计算属性是基于它们的依赖进行缓存的, 相关依赖属性改变这计算改变
+    // 缓存计算属性，避免重复计算
+    computed: {
+      reverseText: function () {
+        return this.text.split('').reverse().join('');
+      },
+      cname: {        
+        // getter
+        get: function () {
+          return 'computed getter: ' + this.name;
+        },
+        // setter
+        set: function (newValue) {
+          this.changeName = 'wz: ' + newValue;
+        }        
+      }
+    },
+    watch: {
+      name: function(val) {
+        console.log(val);
       }
     }
-  })
+  });
+
+
+  var watchExampleVM = new Vue({
+  el: '#watch-example',
+  data: {
+    question: '',
+    answer: 'I cannot give you an answer until you ask a question!'
+  },
+  watch: {
+    // 如果 `question` 发生改变，这个函数就会运行
+    question: function (newQuestion) {
+      this.answer = 'Waiting for you to stop typing...'
+      this.getAnswer()
+    }
+  },
+  methods: {
+    // `_.debounce` 是一个通过 Lodash 限制操作频率的函数。
+    // 在这个例子中，我们希望限制访问 yesno.wtf/api 的频率
+    // AJAX 请求直到用户输入完毕才会发出。想要了解更多关于
+    // `_.debounce` 函数 (及其近亲 `_.throttle`) 的知识，
+    // 请参考：https://lodash.com/docs#debounce
+    getAnswer: _.debounce(
+      function () {
+        if (this.question.indexOf('?') === -1) { //限制重复调用接口
+          this.answer = 'Questions usually contain a question mark. ;-)'
+          return
+        }
+        this.answer = 'Thinking...'
+        var vm = this
+        axios.get('https://yesno.wtf/api')
+          .then(function (response) {
+            vm.answer = _.capitalize(response.data.answer)
+          })
+          .catch(function (error) {
+            vm.answer = 'Error! Could not reach the API. ' + error
+          })
+      },
+      // 这是我们为判定用户停止输入等待的毫秒数
+      500
+    )
+  }
+})
+
 </script>
 </html>
