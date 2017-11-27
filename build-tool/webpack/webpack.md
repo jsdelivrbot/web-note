@@ -14,3 +14,8 @@
 ### react-router 
 
 - [browserHistory浏览器刷新](https://www.thinktxt.com/react/2017/02/26/react-router-browserHistory-refresh-404-solution.html)
+
+## webpack 打包优化
+
+- [webpack2 终极优化](http://imweb.io/topic/5868e1abb3ce6d8e3f9f99bb)
+- [使用 webpack 优化资源](https://zhuanlan.zhihu.com/p/30248068)
