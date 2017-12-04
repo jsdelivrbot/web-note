@@ -13,3 +13,7 @@
 ### SEO 优化
 
 - [SEO优化实战](http://imweb.io/topic/5682938b57d7a6c47914fc00)
+
+### js性能优化
+
+- [JavaScript 性能优化的小知识总结](http://mp.weixin.qq.com/s/NHxA1PLXCvci6HMOeily3w)
