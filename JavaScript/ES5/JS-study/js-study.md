@@ -1,5 +1,7 @@
 ## Welcome to JS study 
 
+> 主要是：javascript高级程序设计（红宝书）学习记录
+
 - [内置对象与原生对象](https://segmentfault.com/a/1190000002634958)
 
 - [JS事件响应](http://blog.jobbole.com/51889/)
