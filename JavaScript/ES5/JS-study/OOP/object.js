@@ -33,6 +33,15 @@ Object.defineProperty(obj, "attr", {
 	writable: false,
 	value: 'test-attr'
 });
+/**
+ * 或
+ * Object.defineProperty(obj, {
+ * 	"attr": {
+ * 		writable: false,
+ * 		value: 'test-attr'
+ * 	}
+ * })
+ */
 // 只读，不可修改
 console.log(obj.attr);
 
@@ -60,3 +69,11 @@ Object.defineProperty(obj, 'attr2', {
 obj.attr2 = 'strsas';
 
 console.log(obj.attr2);
+
+/**
+ * 读取属性的特性
+ * Object.getOwnPropertyDescriptor()
+ */
+
+var definePropertyObj = Object.getOwnPropertyDescriptor(obj, 'attr');
+console.log(definePropertyObj);
