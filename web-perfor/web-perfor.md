@@ -17,3 +17,8 @@
 ### js性能优化
 
 - [JavaScript 性能优化的小知识总结](http://mp.weixin.qq.com/s/NHxA1PLXCvci6HMOeily3w)
+- [常见的 JavaScript 内存泄露](https://mp.weixin.qq.com/s/bp6uO_ZHt-utPtu-qa_Zgw)
+
+### css 优化
+
+- [盒子端 CSS 动画性能提升研究](http://mp.weixin.qq.com/s/VuKJ2L4dFy5bSAGB6h86vQ)

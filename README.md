@@ -136,6 +136,7 @@ HTML5 CSS3 相关的知识可以翻阅
 - [js黑科技](https://zhuanlan.zhihu.com/p/28937831)
 - [canvas截屏 html2canvas](https://html2canvas.hertzen.com/)
 - [CSS-Element-Queries](https://marcj.github.io/css-element-queries/)
+- [网页中文本朗读功能开发实现](http://mp.weixin.qq.com/s/E8Fu7mloS4wU2IJMxQbVtA)
 
 
 **写在最后**
