@@ -18,6 +18,7 @@
 
 - [JavaScript 性能优化的小知识总结](http://mp.weixin.qq.com/s/NHxA1PLXCvci6HMOeily3w)
 - [常见的 JavaScript 内存泄露](https://mp.weixin.qq.com/s/bp6uO_ZHt-utPtu-qa_Zgw)
+- [js性能优化手册](https://github.com/Kikobeats/js-mythbusters)
 
 ### css 优化
 
