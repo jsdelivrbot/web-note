@@ -19,3 +19,8 @@
 
 - [webpack2 终极优化](http://imweb.io/topic/5868e1abb3ce6d8e3f9f99bb)
 - [使用 webpack 优化资源](https://zhuanlan.zhihu.com/p/30248068)
+- [cssnano](http://cssnano.co/)
+
+## webpack 打包示例
+
+- [webpack整体的配置](https://gist.github.com/gwuhaolin/cebd252a23793e742e6acae90ab63e83)

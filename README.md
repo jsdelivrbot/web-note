@@ -100,6 +100,8 @@ HTML5 CSS3 相关的知识可以翻阅
 
 - [ESlint](http://eslint.cn/)
 
+- [jsDoc规范](http://www.css88.com/doc/jsdoc/tags-param.html)
+
 ## 配色/图片
 
 - [每日一粒](https://www.seeseed.com/daily/146)

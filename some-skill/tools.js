@@ -34,6 +34,23 @@ const uniqueArray = (array) => {
   return r;
 }
 
+// 数组对象去重
+const uniqueArrayObj = (songs) =>{
+  let result = {};
+  let finalResult=[];
+  for(let i=0;i<songs.length;i++){
+      result[songs[i].name]=songs[i];
+      //因为songs[i].name不能重复,达到去重效果,且这里必须知晓"name"或是其他键名
+  }
+  //console.log(result);{"羽根":{name:"羽根",artist:"air"},"晴天":{name:"晴天",artist:"周杰伦"}}
+  //现在result内部都是不重复的对象了，只需要将其键值取出来转为数组即可
+  for(const item in result){
+    finalResult.push(result[item]);
+  }
+  //console.log(finalResult);[{name:"羽根",artist:"air"},{name:"晴天",artist:"周杰伦"}]
+  return finalResult;
+}
+
 //对象判等
 const isEquivalent = (a, b) => {
     // 获取对象属性的所有的键
