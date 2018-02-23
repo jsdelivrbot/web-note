@@ -12,11 +12,13 @@
 该配置文件就是用于存储统一的样式规范，告诉编辑器统一使用两个空格，不允许空字符串结尾等等。
 具体请参考 
 [editorconfig.org](http://editorconfig.org/)
+[利用EditorConfig定义代码格式,统一代码风格](https://relign.github.io/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/editor-config/)
 
 ### 代码规范
 
 - .eslintrc.js: 这个很好理解，eslint工具的配置文件。eslint是一款专业对js语法和格式进行检测的工具，大部分的编辑器应该都进行了集成，或者当作插件进行安装。该配置文件告诉eslint哪些文件可以忽略，哪些规则可以忽略，哪些文件适配哪些规则等等。具体请参考: 
 [eslint](https://eslint.org/docs/user-guide/configuring)
+[react的eslint规则配置](https://github.com/ecomfe/spec/issues/38)
 
 - .stylelintrc.js: 同上，stylelint是对样式文件进行语法规范检测的工具，该配置文件则可以对检测规则进行细节配置。具体规则请参考: 
 [stylelint](https://stylelint.io/user-guide/configuration/)

@@ -15,3 +15,7 @@
 ### 存储
 
 - [三种前端本地存储方式讲解](http://mp.weixin.qq.com/s/dnobWOywJanknkGQVurEaw)
+
+### 前端服务器test
+
+- [前端如何拥有自己的服务器](http://mp.weixin.qq.com/s/sHy1oajwy_FDy07sMTFmUA)
