@@ -12,6 +12,7 @@
 ### 适配方案
 
 - [移动端适配方案](https://github.com/riskers/blog/issues/18) 
+- [前端移动端适配总结](http://mp.weixin.qq.com/s/-22kMEXf0S-1okqXw40OqQ)
 - [Flexible 方案](http://www.w3cplus.com/mobile/lib-flexible-for-html5-layout.html)
 - [vw, vh 方案](https://www.w3cplus.com/css/vw-for-layout.html)
 

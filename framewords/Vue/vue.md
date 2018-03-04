@@ -5,3 +5,12 @@
 ## 生命周期
 
 ![](https://raw.githubusercontent.com/NARUTOne/resources-github/master/imgs/vue/lifecycle.png)
+
+## 组件通信
+
+![](https://raw.githubusercontent.com/NARUTOne/resources-github/master/imgs/vue/props-events.png)
+
+## 小记
+
+- [vue组件模板](https://segmentfault.com/q/1010000010775587)
+
