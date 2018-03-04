@@ -342,6 +342,7 @@ function quickSort (arr, left, right) {
 				}
 			}
 			quickSort(arr, left, i - 1);
+			
 			quickSort(arr, i + 1, right);
 		}
 		console.timeEnd('快速排序1耗时：');
@@ -376,6 +377,7 @@ var quickSort2 = function (arr) {
 
 var arr=[3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
 console.log(quickSort(arr, 0, arr.length - 1));
+
 console.log(quickSort2(arr));
 
 

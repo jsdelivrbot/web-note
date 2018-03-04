@@ -12,6 +12,11 @@
 
 - [fetch使用的常见问题及解决办法](http://www.cnblogs.com/wonyun/p/fetch_polyfill_timeout_jsonp_cookie_progress.html)
 
+### axios
+
+- [github axios](https://github.com/axios/axios)
+- [axios全攻略](https://ykloveyxk.github.io/2017/02/25/axios%E5%85%A8%E6%94%BB%E7%95%A5/)
+
 ### 存储
 
 - [三种前端本地存储方式讲解](http://mp.weixin.qq.com/s/dnobWOywJanknkGQVurEaw)
