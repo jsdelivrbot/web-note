@@ -7,6 +7,8 @@
 node_modules
 build
 dist
+dist_test
+lib
 npm-debug.log*
 
 # See https://help.github.com/ignore-files/ for more about ignoring files.

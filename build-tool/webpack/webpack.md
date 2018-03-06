@@ -1,5 +1,6 @@
 ### Welcome to study webpack
 
+[webpack 的 Medium 主页](https://medium.com/webpack)
 [webpack学习](http://www.imooc.com/article/7221)
 [webpack 中文网](https://doc.webpack-china.org)
 
