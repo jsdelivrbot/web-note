@@ -115,6 +115,8 @@ HTML5 CSS3 相关的知识可以翻阅
 
 - [在线作图](www.processon.com)
 
+- [国外在线js工具及库视频学习](https://egghead.io/)
+
 ## 借鉴
 
 > One day reference
