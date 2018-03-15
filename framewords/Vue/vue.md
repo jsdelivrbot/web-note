@@ -13,4 +13,5 @@
 ## 小记
 
 - [vue组件模板](https://segmentfault.com/q/1010000010775587)
+- [parcel-vue](https://github.com/cheneyweb/parcel-vue)
 
