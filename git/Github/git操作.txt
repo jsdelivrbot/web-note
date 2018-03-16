@@ -1,9 +1,9 @@
 
-git remote rm origin  ÒÆ³ıorigin
+git remote rm origin  ç§»é™¤origin
 
-git reset ¨C-hard [°æ±¾]:»ØÍË
+git reset â€“-hard [ç‰ˆæœ¬]:å›é€€
 
-·ÖÖ§ºÏ²¢£º
+åˆ†æ”¯åˆå¹¶ï¼š
 $ git checkout master
 $ git merge --no-ff develop
 $ git pull origin master
@@ -12,14 +12,14 @@ $ git commit -m "xxx"
 $ git push origin master
 
 
-´´½¨ÏîÄ¿ÉÏ´«ÏîÄ¿£º
+åˆ›å»ºé¡¹ç›®ä¸Šä¼ é¡¹ç›®ï¼š
 $ git config --global user.name "wuzhong"
 
 $ git config --global user.email "zhong.wu@baifendian.com"
 
 $ git clone url
 
-cd  Ä¿±êÂ·¾¶
+cd  ç›®æ ‡è·¯å¾„
 
 $ git init
 
@@ -34,11 +34,11 @@ $ git commit
 $ git push -u origin master 
 
 
-´´½¨·ÖÖ§
+åˆ›å»ºåˆ†æ”¯
 
 $ git clone url 
 
-cd Ä¿±êÂ·¾¶
+cd ç›®æ ‡è·¯å¾„
 
 $ git checkout -b develop
 
@@ -49,48 +49,48 @@ $ git commit -m "xx"
 $ git push origin develop
 
 
-É¾³ı·ÖÖ§
-git  branch -a  // ²é¿´
+åˆ é™¤åˆ†æ”¯
+git  branch -a  // æŸ¥çœ‹
 git checkout master
 
-(±¾µØ)
-(ĞèÒªÇĞ»»µ½ÆäËû·ÖÖ§master)
+(æœ¬åœ°)
+(éœ€è¦åˆ‡æ¢åˆ°å…¶ä»–åˆ†æ”¯master)
 git branch -d  name
 
-(Ô¶³Ì)
+(è¿œç¨‹)
 git branch -r -d origin/name 
 git push origin :name
 
 
-É¾³ıÎÄ¼ş
+åˆ é™¤æ–‡ä»¶
 git rm name -r 
-½Ó×ÅÔÙcommit + pushÒ»±é
+æ¥ç€å†commit + pushä¸€é
 
 
-git reset --hard °æ±¾ »ØÍË°æ±¾
+git reset --hard ç‰ˆæœ¬ å›é€€ç‰ˆæœ¬
 
 
-´´½¨ ÎÈ¶¨²»¿ÉÒÔ¸Ä±êÇ© tags
+åˆ›å»º ç¨³å®šä¸å¯ä»¥æ”¹æ ‡ç­¾ tags
 
-´´½¨
+åˆ›å»º
 
 git tag -a V1.2 -m 'WebSite version 1.2'
 
-²é¿´
+æŸ¥çœ‹
 
 git tag
 
-ÍÆËÍtag
+æ¨é€tag
 
 git push origin --tags
 
-É¾³ı
+åˆ é™¤
 
 git tag -d V1.2
 
 git push origin :refs/tags/V1.2
 
-»ñÈ¡°æ±¾´úÂë
+è·å–ç‰ˆæœ¬ä»£ç 
 
 git fetch origin tag V1.2
 
