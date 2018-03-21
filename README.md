@@ -5,11 +5,8 @@
 :smile:
 
 > 总体参考：JavaScript权威指南，JavaScript高级程序设计
-> 
 > 学习路线参考：[前端工程师手册2015](https://leohxj.gitbooks.io/front-end-database/content/ "前端工程师手册")
-> 
 >参考笔记： [https://github.com/iamjoel/front-end-note](https://github.com/iamjoel/front-end-note)
-
 > 学习参考链接：[MDN](https://developer.mozilla.org/en-US/docs/Web)
 
 - [程序员的自我修养](https://leohxj.gitbooks.io/a-programmer-prepares/content/)
@@ -68,7 +65,6 @@ HTML5 CSS3 相关的知识可以翻阅
 ## 浏览器
 
 - 浏览器渲染机制：[浏览器的工作原理：新式网络浏览器幕后揭秘](https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/#1_1)
-
 - [浏览器兼容](https://juejin.im/post/59a3f2fe6fb9a0249471cbb4)
 
 ## UI库、框架
@@ -91,15 +87,10 @@ HTML5 CSS3 相关的知识可以翻阅
 > 咱们自古就有无规矩不成方圆，代码、文档编写，项目的开发等都是需要规范的，有规范才能更好的一起拥抱未来。
 
 - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
-
 - [文档与源码编写风格](https://github.com/fex-team/styleguide)
-
 - [RESTful](https://developer.github.com/)
-
 - [文档注释规范 YUIDoc规范](http://www.cnblogs.com/chris-oil/p/5387129.html)
-
 - [ESlint](http://eslint.cn/)
-
 - [jsDoc规范](http://www.css88.com/doc/jsdoc/tags-param.html)
 
 ## 配色/图片
@@ -112,9 +103,7 @@ HTML5 CSS3 相关的知识可以翻阅
 ## 在线资源
 
 - [BootCDN](http://www.bootcdn.cn/)
-
 - [在线作图](www.processon.com)
-
 - [国外在线js工具及库视频学习](https://egghead.io/)
 
 ## 借鉴
@@ -124,11 +113,8 @@ HTML5 CSS3 相关的知识可以翻阅
 **博客**
 
 - [ My Coding Life](http://bin-playground.top/#/)
-
 - [西风 blog](https://xifengxx.github.io/)
-
 - [Que's Blog](http://que01.top/)
-
 - [前端博客](https://yezihaohao.github.io/)
 
 **个人框架**
