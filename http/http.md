@@ -1,5 +1,6 @@
 ###Welcome to http
 
+- [ XMLHttpRequest 规范](https://xhr.spec.whatwg.org/)
 - [浏览器同源策略](https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy)
 - [xhr](http://javascript.ruanyifeng.com/bom/ajax.html)
 - [跨域资源共享 CORS 详解](http://www.ruanyifeng.com/blog/2016/04/cors.html)
