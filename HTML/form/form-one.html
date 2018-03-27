@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form id='form'>
+    <label for="name">
+      name: <input type="text" id='name' name='username'/>
+      <input id="save" type="button" value="Save" onclick="handleClick(this)">
+    </label>    
+  </form>
+</body>
+<script>
+  var form = document.getElementById('form');
+  function handleSubmit(ev) {
+    ev = ev || window.event; // Event对象
+    if (ev.preventDefault) { // 标准浏览器
+      ev.preventDefault();
+    } else { // IE浏览器
+      window.event.returnValue = false;
+    }
+    console.log(200);
+    console.log(ev);
+    
+    const ipt = ev.target.username.value;
+    alert('submit! ' + ipt);
+    return false; // 防止页面刷新
+  }
+  function handleClick(el) {
+    console.log(el);
+    alert('click！');
+  }
+  // console.log(form);
+  form.addEventListener('submit', handleSubmit , false);
+</script>
+</html>

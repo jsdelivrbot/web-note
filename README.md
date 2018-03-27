@@ -11,6 +11,7 @@
 
 - [程序员的自我修养](https://leohxj.gitbooks.io/a-programmer-prepares/content/)
 - [前端浅析](https://segmentfault.com/a/1190000005875954)
+- [页面加载了解前端](http://mp.weixin.qq.com/s/qMsf4DcMhn2cf0fXC-PLVA)
 
 **个人web笔记，主要记录一些学习中随记、随想，并不会详细记录各个知识点。**
 
@@ -131,6 +132,15 @@ HTML5 CSS3 相关的知识可以翻阅
 - [网页中文本朗读功能开发实现](http://mp.weixin.qq.com/s/E8Fu7mloS4wU2IJMxQbVtA)
 - [深度学习自动生成HTML代码](https://mp.weixin.qq.com/s/4b4TPkIRPJ3VBkCOA6kbxw)
 - [svg背景]()(https://www.svgbackgrounds.com/)
+
+## github
+> 一些开源组织
+
+- [Alibaba](https://github.com/alibaba)
+- [vue](https://github.com/vuejs)
+- [weixin](https://github.com/weixin)
+- [tencent](https://github.com/Tencent)
+- [baidu](https://github.com/baidu)
 
 
 **写在最后**
