@@ -163,3 +163,7 @@ npm install -g generator-name
 ```
 yo reactpackage
 ```
+
+## 参考
+
+- [ant-scaffold 脚手架市场](http://scaffold.ant.design)
