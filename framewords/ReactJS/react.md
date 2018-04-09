@@ -54,3 +54,4 @@ const createStore = (reducer) => {
 
 - [ReactJS 技术栈学习小记](https://github.com/iuap-design/blog/issues/178)
 - [react 权限](http://blog.hypers.io/2017/07/22/react-permission/)
+- [react-router 4.x 升级小记](http://mp.weixin.qq.com/s/5j1Bd5hazOo6jqOuAiWsGA)

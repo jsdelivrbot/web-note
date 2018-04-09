@@ -5,7 +5,6 @@
 .DS_Store
 .com.apple.timemachine.supported
 node_modules
-build
 dist
 dist_test
 lib
@@ -20,7 +19,6 @@ npm-debug.log*
 /coverage
 
 # production
-/build
 
 # misc
 .DS_Store
