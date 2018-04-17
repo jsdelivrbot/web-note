@@ -5,3 +5,4 @@
 
 - [第一份工作进大公司](http://mp.weixin.qq.com/s/IYihvHZSZAEtTn4oi2X0cw)
 - [自律与自利](http://mp.weixin.qq.com/s/cmWjwffFAIzM2ytGv10O2Q)
+- [25岁三件事](http://mp.weixin.qq.com/s/bDhlDM9oOpefK5qL5KMN5A)
