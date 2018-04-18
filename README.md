@@ -142,6 +142,8 @@ HTML5 CSS3 相关的知识可以翻阅
 - [tencent](https://github.com/Tencent)
 - [baidu](https://github.com/baidu)
 
+### todolist
+[todoist](https://zhtw.todoist.com/downloads?focus=desktop)
 
 **写在最后**
 
