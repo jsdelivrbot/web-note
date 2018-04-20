@@ -238,3 +238,8 @@ npm list -g --depth=0
 常用就这些，一般就用~和^或者直接写版本
 
 > 以上就是npm常用一些小知识。
+
+
+## 参考
+
+- [npm 和 yarn 缓存策略对比](https://segmentfault.com/a/1190000009709213)
