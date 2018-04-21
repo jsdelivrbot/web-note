@@ -11,6 +11,9 @@ $ git add *
 $ git commit -m "xxx"
 $ git push origin master
 
+查看
+git config user.name
+git config user.email
 
 创建项目上传项目：
 $ git config --global user.name "wuzhong"
