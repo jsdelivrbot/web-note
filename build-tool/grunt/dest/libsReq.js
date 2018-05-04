@@ -1,1 +1,0 @@
-function foo(){console.log(0)}function app(){console.log(1)}function web(){console.log(2)}define("$",function(){}),define("_",function(){}),define("B",function(){});
