@@ -71,6 +71,7 @@
 - [BootCDN](http://www.bootcdn.cn/)
 - [在线作图](www.processon.com)
 - [国外在线js工具及库视频学习](https://egghead.io/)
+- [在线图床](https://sm.ms/)
 
 ## github
 
