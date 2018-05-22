@@ -116,15 +116,8 @@ git push origin :refs/tags/V1.2
 
 git fetch origin tag V1.2
 
+## 技巧
 
+- git config --global alias.ac '!git add -A && git commit -m ' 可以将 git add 和 git commit -m 这两条命令合二为一
 
-
-
-
-
-
-
-
-
-
-
+接下来你可以这样使用 git ac "提交信息"

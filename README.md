@@ -64,6 +64,7 @@
 - [Pick Your Colors](http://www.vanschneider.com/colors/)
 - [在线渐变配色](http://gradient.awesomes.cn/)
 - [图片素材网站](http://mp.weixin.qq.com/s/FHTgWBAQCGLDbIF5RreZaw)
+- [截图，加上边框和效果](https://www.screely.com/)
 
 ## 在线资源
 
