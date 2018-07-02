@@ -24,6 +24,7 @@ git config  user.email "your email"
 ```
 
 ## 分支合并：
+
 $ git checkout master
 $ git merge --no-ff develop
 $ git pull origin master
@@ -32,10 +33,12 @@ $ git commit -m "xxx"
 $ git push origin master
 
 ## 查看
+
 git config user.name
 git config user.email
 
 ## 创建项目上传项目：
+
 $ git config --global user.name "wuzhong"
 
 $ git config --global user.email "zhong.wu@baifendian.com"
@@ -56,7 +59,6 @@ $ git commit
 
 $ git push -u origin master 
 
-
 ## 创建分支
 
 $ git clone url 
@@ -73,6 +75,7 @@ $ git push origin develop
 
 
 ## 删除分支
+
 git  branch -a  // 查看
 git checkout master
 
@@ -86,6 +89,7 @@ git push origin :name
 
 
 ## 删除文件
+
 git rm name -r 
 接着再commit + push一遍
 
