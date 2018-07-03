@@ -11,17 +11,17 @@ var w = 250,
  
 var vis = d3.select("#chart").selectAll("svg")
     .data(orders)
-  .enter().append("svg:svg")
+    .enter().append("svg:svg")
     .attr("width", w + 2 * padding)
     .attr("height", h + 2 * padding)
-  .append("svg:g")
+    .append("svg:g")
     .attr("transform", "translate(" + padding + "," + padding + ")");
  
 update();
  
 vis.selectAll("circle.control")
     .data(function(d) { return points.slice(0, d) })
-  .enter().append("svg:circle")
+    .enter().append("svg:circle")
     .attr("class", "control")
     .attr("r", 7)
     .attr("cx", x)
@@ -86,7 +86,7 @@ function update() {
       .attr("d", line);
   path.attr("d", line);
  
-  var curve = vis.selectAll("path.curve")
+  var curve = vis.selectAll("path.curve") // 曲线
       .data(getCurve);
   curve.enter().append("svg:path")
       .attr("class", "curve");
@@ -99,7 +99,7 @@ function update() {
       .text("t=" + t.toFixed(2));
 }
  
-function interpolate(d, p) {
+function interpolate(d, p) { // 中心点
   if (arguments.length < 2) p = t;
   var r = [];
   for (var i=1; i<d.length; i++) {
@@ -109,7 +109,7 @@ function interpolate(d, p) {
   return r;
 }
  
-function getLevels(d, t_) {
+function getLevels(d, t_) { // 获取点
   if (arguments.length < 2) t_ = t;
   var x = [points.slice(0, d)];
   for (var i=1; i<d; i++) {
@@ -118,7 +118,7 @@ function getLevels(d, t_) {
   return x;
 }
  
-function getCurve(d) {
+function getCurve(d) { // 二次获取点
   var curve = bezier[d];
   if (!curve) {
     curve = bezier[d] = [];
