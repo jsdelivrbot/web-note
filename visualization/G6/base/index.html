@@ -135,7 +135,7 @@
     getText(){
       return '2、我是一个自定义节点，\n继承于 rect';
     }
-  }, 'rect');
+  }, 'rect'); // 只有同类型图项下的图形类才能互相继承。
 
   const graph = new G6.Graph({
     container: 'mountNode',
