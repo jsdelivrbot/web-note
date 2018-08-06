@@ -2,6 +2,8 @@
 
 VSCode的快捷键继承了一些IDE风格，有VS的身影，也有Emacs的身影。。简言之，内置快捷键玩熟了，效率提高不是一点两点。
 
+[vscode中文](https://www.gitbook.com/book/jeasonstudio/vscode-cn-doc)
+
 ----
 
 ## VsCode 快捷键有五种组合方式（科普）
@@ -208,3 +210,14 @@ VSCode的快捷键继承了一些IDE风格，有VS的身影，也有Emacs的身�
 |Ctrl + Home / End| 滚动到页面头部或尾部 |
 
 ----
+
+## 问题
+
+**rg.exe**占cpu过高
+[When using cnpm/pnpm, rg uses lots of CPU #35659](https://link.zhihu.com/?target=https%3A//github.com/Microsoft/vscode/issues/35659)
+
+```bash
+cnpm install --by=npm
+
+"search.followSymlinks": false
+```
