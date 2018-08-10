@@ -41,9 +41,11 @@ const timeout = (ms = 0) => new Promise((resolve, reject) => {
  */
 
 const mergeAjax = (ajaxArray) => {
-  /* ES6 */
+  /**
+  * ! ES6 
+  */
 
-  // async await
+  // ? async await
   return new Promise((resolve, reject) => {
     const result = [];
     (async () => {
@@ -75,6 +77,10 @@ const mergeAjax = (ajaxArray) => {
   //   }
   // }
 
+  /**
+   * ! ES5
+   */
+  
 }
 
 const ajax1 = () => timeout(2000).then(() => {
