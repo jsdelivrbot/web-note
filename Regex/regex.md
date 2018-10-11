@@ -1,13 +1,4 @@
-# Regex 正则表达式
-
-> 程序员必备基础
-
-- [MDN Regex](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
-
-- [正则表达式学习总结](https://segmentfault.com/a/1190000008766125)
-- [深入浅出的javascript的正则表达式](http://web.jobbole.com/84450/)
-- [正则学习](http://mp.weixin.qq.com/s/dVci7XH-xyd9FOdmVoJBDQ)
-
+# 正则储备
 
 ## 随记  
 
