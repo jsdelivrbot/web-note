@@ -163,13 +163,6 @@ HTML5 CSS3 相关的知识可以翻阅
 
 跟进新技术，作为茶余饭后的点心
 
-### 博客
-
-- [My Coding Life](http://bin-playground.top/#/)
-- [西风 blog](https://xifengxx.github.io/)
-- [Que's Blog](http://que01.top/)
-- [前端博客](https://yezihaohao.github.io/)
-
 ### 个人框架
 
 - [octJS](https://github.com/younglaker/octjs)
