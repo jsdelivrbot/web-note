@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset='utf-8'>
+    <title>动画效果 - 圆形进度条</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no,maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="Keywords" content="SVG - 动画效果 - 圆形进度条" />
+    <meta name="author" content="心叶" />
+    <link rel="apple-touch-icon" sizes="52x52" href="52icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="72icon.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="120icon.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="144icon.png" />
+    <style>
+        body {
+            margin: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="circle"></div>
+</body>
+
+<script>
+    // 1.基本设置：圆环轨道半径(圆环中点),圆环的粗细和进度时间
+    var r = 170,
+        w = 10,
+        s = '2s';
+    // 2.进度：终点位置
+    var p = 0.88;
+    // 3.辅助计算（可以忽略）
+    p = p > 1 ? 1 : p;
+    p = p < 0 ? 0 : p;
+    var beginOffsetX = r - r * Math.cos(p  * Math.PI);
+    var beginOffsetY = -r * Math.sin(p  * Math.PI);
+    var L = 2 * Math.PI * r;
+    var dis = L * p/2;
+    var grayDis = L - dis;
+    var endSmileCircleX = r * Math.cos(p  * Math.PI) + 220;
+    var endSmileCircleY = r * Math.sin(p  * Math.PI) + 220;
+    var svgTemplate = '<svg width="700" height="700" viewBox="0 0 440 440" style="transform: rotate(180deg) rotateY(0deg);">' +
+
+        '        <!-- 圆轨道 -->' +
+        '        <circle cx="220" cy="220" r=' + r + ' stroke-width=' + w + ' stroke-dasharray="'+L/2+' '+L/2+'" stroke="rgb(193,193,193)" fill="none"></circle>' +
+                '<g >' +
+        '          <path d="M 70 220 A 150 150 0 0 0 370 220" stroke-dasharray="3,12" fill="#fff" stroke="#E6E6E6" stroke-width="10"/>' + 
+                '</g>'+
+        '        <!--弧形进度条-->' +
+        '        <g>' +
+        '            <g>' +
+        '                <circle cx="220" cy="220" r="' + r + '" stroke-width="' + w + '" stroke="rgb(255, 0, 0)" fill="none"  stroke-dasharray="' + dis + ' ' + grayDis + '">' +
+        '                    <animate attributeName="stroke-dasharray" from="0 ' + L + '" to="' + dis + ' ' + grayDis + '" begin="0s" dur="' + s + '" repeatCount="1"/>' +
+        '                </circle>' +
+        '            </g>' +
+        '            <!-- 轨道结束小圆环 -->' +
+        '            <g>' +
+        '                <circle cx="50" cy="220" r="' + (w / 2) + '" fill="rgb(193,193,193)"></circle>' +
+        '           </g>' +
+        '            <!-- 开头小圆环 -->' +
+        '            <g>' +
+        '                <circle cx="' + (220 - (-r)) + '" cy="220" r="' + (w / 2) + '" fill="rgb(255, 0, 0)"></circle>' +
+        '           </g>' +
+        '            <!-- 结束小圆环 -->' +
+        '            <g>' +
+        '                <circle cx="' + endSmileCircleX + '" cy="' + endSmileCircleY + '" r="' + (w / 2) + '" fill="rgb(255, 0, 0)" stroke-width="0" stroke="rgb(255, 0, 0)">' +
+        '                   <!--轨迹是偏移量，不是绝对定位-->' +
+        '                   <!--A的参数方便表示：椭圆二个半轴的长度，椭圆的X轴与水平方向顺时针方向夹角，表示是大弧还是小弧(1表示大角度弧线，0为小角度弧线),确定从起点至终点的方向(1为顺时针，0为逆时针),最后二个是终点偏移距离-->' +
+        '                    <animateMotion path="M' + beginOffsetX + ',' + beginOffsetY + ' A' + r + ' ' + r + ' 0 0 1 0 0" begin="0s" dur="' + s + '" rotate="none" repeatCount="1"/>' +
+        '                </circle>' +
+        '            </g>' +
+        '        </g>' +
+        '    </svg>';
+    var sFrame = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
+    sFrame.innerHTML = svgTemplate;
+    try {
+        document.getElementById('circle').insertBefore(sFrame.childNodes[0], document.getElementById('circle').childNodes[0]);
+    } catch (e) {
+        document.getElementById('circle').innerHTML = '<div style="line-height:100px;text-align:center;color:red;">非常抱歉，您的浏览器不支持SVG相关操作!</div>';
+    }
+</script>
+
+</html>
+
+<!--
+    开发时间：2018-04-09
+    项目地址：https://github.com/yelloxing/WebCase
+-->
