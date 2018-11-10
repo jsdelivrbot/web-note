@@ -8,8 +8,6 @@
 
 :smile: :art:
 
-> [前端工程师手册2015](https://leohxj.gitbooks.io/front-end-database/content/ "前端工程师手册")
-> 推荐笔记： [https://github.com/iamjoel/front-end-note](https://github.com/iamjoel/front-end-note)
 > 学习参考：[MDN](https://developer.mozilla.org/en-US/docs/Web)
 
 - [程序员的自我修养](https://leohxj.gitbooks.io/a-programmer-prepares/content/)
@@ -134,6 +132,8 @@
 - [weixin](https://github.com/weixin)
 - [tencent](https://github.com/Tencent)
 - [baidu](https://github.com/baidu)
+
+**如何写一个现代的JavaScript库**: [https://mp.weixin.qq.com/s/2y-o-hgVGozBJcHAODPLVg](https://mp.weixin.qq.com/s/2y-o-hgVGozBJcHAODPLVg)
 
 ## todolist
 
