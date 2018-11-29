@@ -28,6 +28,32 @@
  * 　　　┗┻┛　┗┻┛     
  */
 
+ /**
+  * 
+const timeout = (ms = 0) => new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve();
+  }, ms);
+});
+const ajax1 = () => timeout(1000).then(() => {
+  console.log('1');
+  return 1;
+});
+
+const ajax2 = () => timeout(1000).then(() => {
+  console.log('2');
+  return 2;
+});
+
+const ajax3 = () => timeout(1000).then(() => {
+  console.log('3');
+  return 3;
+});
+
+// 分别采用 ES5 ES6 实现 ? 执行结果：1 2 3 done [1, 2, 3]
+  */
+
+
 const timeout = (ms = 0) => new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve();
